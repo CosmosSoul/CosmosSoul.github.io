@@ -3,6 +3,34 @@
    Inspired by varadbhogayata.github.io
    ========================================================= */
 
+/* ─────────────────────────────────────────────────────────
+   SAVED COLOUR SCHEME — original (restore by copying into :root)
+   --navy:       #1f2235
+   --navy-light: #2b2d42
+   --navy-card:  #272a3d
+   --accent:     #00b4d8
+   --accent-dim: #0096b4
+   --light-bg:   #f4f4f9   ← original light section bg (dark mode was #2e2d45, then #3d3b5c)
+   --light-card: #ffffff   ← original (dark mode was #38364f, then #4a4768)
+   --text-dark:  #1f2235
+   --text-light: #e0e0e0
+   --text-muted: #a0a8c0
+   --text-body:  (did not exist — was hardcoded #444/#555 in about/timeline)
+   --border:     rgba(0, 180, 216, 0.2)
+   --shadow:     0 4px 24px rgba(0,0,0,0.18)
+
+   LIGHT MODE originals (html[data-theme="light"]):
+   --navy:       #f0f4f8
+   --navy-light: #dce4ed
+   --navy-card:  #ffffff
+   --light-bg:   #e4ecf4
+   --light-card: #ffffff
+   --text-dark:  #1f2235
+   --text-light: #1f2235
+   --text-muted: #4a5568
+   --text-body:  (did not exist — was hardcoded #444/#555)
+   ───────────────────────────────────────────────────────── */
+
 /* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -12,11 +40,12 @@
     --navy-card:  #272a3d;
     --accent:     #00b4d8;
     --accent-dim: #0096b4;
-    --light-bg:   #f4f4f9;
-    --light-card: #ffffff;
+    --light-bg:   #3d3b5c;
+    --light-card: #4a4768;
     --text-dark:  #1f2235;
     --text-light: #e0e0e0;
     --text-muted: #a0a8c0;
+    --text-body:  #c8cfe0;
     --border:     rgba(0, 180, 216, 0.2);
     --shadow:     0 4px 24px rgba(0,0,0,0.18);
     --radius:     10px;
@@ -24,6 +53,44 @@
     --font:       'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
     --transition: 0.25s ease;
 }
+
+/* ── LIGHT MODE OVERRIDES ── */
+html[data-theme="light"] {
+    --navy:       #c9d6e3;
+    --navy-light: #b8c9d9;
+    --navy-card:  #dde6ef;
+    --light-bg:   #dde6ef;
+    --light-card: #eaf0f6;
+    --text-dark:  #1a2332;
+    --text-light: #1a2332;
+    --text-muted: #3d5166;
+    --text-body:  #2c3e52;
+    --border:     rgba(0, 180, 216, 0.3);
+    --shadow:     0 4px 24px rgba(0,0,0,0.1);
+}
+html[data-theme="light"] body { background: var(--navy); color: var(--text-dark); }
+html[data-theme="light"] #navbar { background: var(--navy); border-bottom-color: var(--border); }
+html[data-theme="light"] .nav-links a { color: var(--text-muted); }
+html[data-theme="light"] .nav-links a:hover,
+html[data-theme="light"] .nav-links a.active { color: var(--accent); }
+html[data-theme="light"] .nav-hamburger span { background: var(--text-dark); }
+html[data-theme="light"] .section-light { background: var(--light-bg); color: var(--text-dark); }
+html[data-theme="light"] .section-light .section-title { color: var(--text-dark); }
+html[data-theme="light"] .section-light .about-text p { color: var(--text-muted); }
+html[data-theme="light"] .section-light .timeline-card { background: var(--light-card); }
+html[data-theme="light"] .section-light .timeline-header h3 { color: var(--text-dark); }
+html[data-theme="light"] .section-light .timeline-bullets li { color: var(--text-muted); }
+html[data-theme="light"] .section-light .contact-sub { color: var(--text-muted); }
+html[data-theme="light"] .section-light .contact-socials a { color: var(--text-dark); }
+html[data-theme="light"] .section-dark { background: var(--navy-light); color: var(--text-dark); }
+html[data-theme="light"] .section-dark .section-title { color: var(--text-dark); }
+html[data-theme="light"] .section-dark .skill-group { background: var(--light-card); border-color: var(--border); }
+html[data-theme="light"] .section-dark .skill-list li { color: var(--text-muted); border-bottom-color: rgba(0,0,0,0.06); }
+html[data-theme="light"] .section-dark .project-card { background: var(--light-card); }
+html[data-theme="light"] .section-dark .project-title { color: var(--text-dark); }
+html[data-theme="light"] .section-dark .project-desc { color: var(--text-muted); }
+html[data-theme="light"] .filter-tab { color: var(--text-muted); border-color: rgba(0,0,0,0.15); }
+html[data-theme="light"] #footer { background: var(--navy-light); color: var(--text-muted); }
 
 html { scroll-behavior: smooth; font-size: 16px; }
 
@@ -170,6 +237,30 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* ── THEME TOGGLE ── */
+.theme-toggle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--text-muted);
+    border: 1.5px solid var(--border);
+    transition: color var(--transition), border-color var(--transition), background var(--transition), transform var(--transition);
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+.theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(0,180,216,0.08);
+    transform: rotate(20deg);
+}
+html[data-theme="light"] .theme-toggle { color: #f59e0b; border-color: #f59e0b; }
+html[data-theme="light"] .theme-toggle:hover { background: rgba(245,158,11,0.1); border-color: #f59e0b; }
+
 /* ── HERO ── */
 #home {
     min-height: 100vh;
@@ -275,7 +366,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .about-text p {
     margin-bottom: 16px;
     font-size: 1rem;
-    color: #444;
+    color: var(--text-body);
     line-height: 1.8;
 }
 .about-text p:last-of-type { margin-bottom: 28px; }
@@ -290,7 +381,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
     align-items: center;
     gap: 10px;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-body);
     font-weight: 500;
 }
 .about-facts li i { color: var(--accent); width: 16px; text-align: center; }
@@ -435,7 +526,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .timeline-org { font-size: 0.9rem; color: var(--accent); font-weight: 600; margin-top: 2px; }
 .timeline-date {
     font-size: 0.82rem;
-    color: #888;
+    color: var(--text-muted);
     font-weight: 600;
     white-space: nowrap;
     background: var(--light-bg);
@@ -448,7 +539,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 }
 .timeline-bullets li {
     font-size: 0.93rem;
-    color: #555;
+    color: var(--text-body);
     margin-bottom: 6px;
     line-height: 1.6;
 }

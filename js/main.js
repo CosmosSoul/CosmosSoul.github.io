@@ -285,6 +285,30 @@ function initProjectFilters() {
     });
 }
 
+// ── THEME TOGGLE ─────────────────────────────────────────
+function initThemeToggle() {
+    const btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+
+    const icon = btn.querySelector("i");
+
+    function applyTheme(theme) {
+        document.documentElement.dataset.theme = theme;
+        icon.className = theme === "light" ? "fas fa-moon" : "fas fa-sun";
+        btn.setAttribute("aria-label", theme === "light" ? "Switch to dark mode" : "Switch to light mode");
+    }
+
+    // Restore saved preference, defaulting to dark
+    const saved = localStorage.getItem("theme") || "dark";
+    applyTheme(saved);
+
+    btn.addEventListener("click", () => {
+        const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+        localStorage.setItem("theme", next);
+        applyTheme(next);
+    });
+}
+
 // ── FOOTER YEAR ───────────────────────────────────────────
 function setYear() {
     const el = document.getElementById("footer-year");
@@ -294,6 +318,7 @@ function setYear() {
 // ── INIT ──────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
     setYear();
+    initThemeToggle();
     initNavbar();
     initHamburger();
     renderProjects();
