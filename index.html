@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio — Game Designer, Analyst & Music Producer">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Raleway+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">Darryl Hutchinson</a>
+            <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="assets/pdfs/resume.pdf" target="_blank" class="nav-resume-btn">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section id="home">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">Darryl H.</h1>
+                <p class="hero-role"><span id="typed-role"></span><span class="cursor">|</span></p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="assets/pdfs/resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://itch.io/" target="_blank" aria-label="itch.io"><i class="fab fa-itch-io"></i></a>
+                    <a href="https://soundcloud.com/darryl_21/tracks" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+                    <a href="mailto:darrylehutchinson@msn.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <!-- Replace src with your actual photo -->
+                <img src="assets/images/profile.jpg" alt="Profile photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="hero-photo-placeholder" style="display:none;">
+                    <span>DH</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about" class="section section-light">
+        <div class="section-inner">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a <strong>game designer</strong> passionate about systems thinking, 
+                        player psychology, and interactive storytelling. I approach every project with 
+                        a critical eye for how mechanics and narrative intertwine to shape player experience.
+                    </p>
+                    <p>
+                        Outside of design, I produce electronic music and use it as a lens for 
+                        understanding rhythm, tension, and release — principles that translate directly 
+                        into pacing and feedback design in games.
+                    </p>
+                    <p>
+                        I'm currently looking for opportunities in game design, UX, or creative 
+                        strategy roles where I can bring both analytical rigour and creative intuition.
+                    </p>
+                    <!-- Quick-facts grid -->
+                    <ul class="about-facts">
+                        <li><i class="fas fa-map-marker-alt"></i> New York </li>
+                        <li><i class="fas fa-graduation-cap"></i>MS Games for Learning NYU</li>
+                        <!-- <li><i class="fas fa-briefcase"></i> Open to opportunities</li> -->
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:darrylehutchinson@msn.com">darrylehutchinson@msn.com</a></li>
+                    </ul>
+                </div>
+                <div class="about-skills-summary">
+                    <h3>What I Do</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">Game Design</span>
+                        <span class="tag">Systems Design</span>
+                        <span class="tag">Learning Experience Design</span>
+                        <span class="tag">Onboarding</span>
+                        <span class="tag">Tutorialization</span>
+                        <span class="tag">Project Coordination</span>
+                        <span class="tag">Systems Design</span>
+                        <span class="tag">UX Research</span>
+                        <span class="tag">Design Analysis</span>
+                        <span class="tag">Prototyping</span>
+                        <span class="tag">Narrative Design</span>
+                        <span class="tag">Level Design</span>
+                        <span class="tag">Playtesting</span>
+                        <span class="tag">Unity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills" class="section section-dark">
+        <div class="section-inner">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-icons-grid">
+
+                <!-- Game & Learning Design -->
+                <div class="skill-group fade-in">
+                    <div class="skill-group-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3 class="skill-group-title">Game &amp; Learning Design</h3>
+                    <ul class="skill-list">
+                        <li>Game Design</li>
+                        <li>Systems Design</li>
+                        <li>Level Design</li>
+                        <li>Narrative Design</li>
+                        <li>Learning Experience Design</li>
+                        <li>Onboarding &amp; Tutorialization</li>
+                        <li>Playtesting &amp; UX</li>
+                    </ul>
+                </div>
+
+                <!-- Production -->
+                <div class="skill-group fade-in">
+                    <div class="skill-group-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                    <h3 class="skill-group-title">Production</h3>
+                    <ul class="skill-list">
+                        <li>Agile/Scrum</li>
+                        <li>Sprint Planning</li>
+                        <li>Milestone Tracking</li>
+                        <li>Documentation</li>
+                        <li>Scope Management</li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-group fade-in">
+                    <div class="skill-group-icon"><i class="fas fa-tools"></i></div>
+                    <h3 class="skill-group-title">Tools</h3>
+                    <ul class="skill-list">
+                        <li>Unity</li>
+                        <li>Figma</li>
+                        <li>Miro</li>
+                        <li>Notion</li>
+                        <li>Google Workspace</li>
+                        <li>Microsoft Office</li>
+                    </ul>
+                </div>
+
+                <!-- Interpersonal -->
+                <div class="skill-group fade-in">
+                    <div class="skill-group-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="skill-group-title">Interpersonal</h3>
+                    <ul class="skill-list">
+                        <li>Project Coordination</li>
+                        <li>Research &amp; Writing</li>
+                        <li>Presentation</li>
+                        <li>Team Collaboration</li>
+                        <li>Facilitation</li>
+                    </ul>
+                </div>
+
+                <!-- Languages -->
+                <div class="skill-group fade-in">
+                    <div class="skill-group-icon"><i class="fas fa-language"></i></div>
+                    <h3 class="skill-group-title">Languages</h3>
+                    <ul class="skill-list">
+                        <li>English — Native</li>
+                        <li>Japanese — Fluent</li>
+                        <li>Spanish — Emerging</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience" class="section section-light">
+        <div class="section-inner">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Product Designer</h3>
+                                <p class="timeline-org"><a href="https://joyeducation.org/about-us/">Joy Education</a></p>
+                            </div>
+                            <span class="timeline-date">2026</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Collaborated with executive and management team to establish initial design targets and scoped 4-month design sprint</li>
+                            <li>Designed 50 questions, for 20 minute interview conducted re </li>
+                            <li>Collaborated with product, engineering, and marketing teams to refine design direction, prioritize features, and ensure alignment with business goals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Exhibit Manager</h3>
+                                <p class="timeline-org"><a href="https://movingimage.org/">American Museum of the Moving Image</a></p>
+                            </div>
+                            <span class="timeline-date">2025</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Managed day-to-day operations of an interactive VR exhibit serving 200+ daily visitors across ages, abilities, and technical backgrounds</li>
+                            <li>Conducted 50+ user observation sessions identifying critical usability and accessibility issues, increasing engagement 25% and reducing support incidents 35%</li>
+                            <li>Collaborated with design, curation, and technical teams to refine interaction design, onboarding flow, and learner support strategies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Production Intern</h3>
+                                <p class="timeline-org"><a href="https://www.fablevisionstudios.com/">FableVision Studios</a></p>
+                            </div>
+                            <span class="timeline-date">2024</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Helped manage production pipeline across 4 concurrent digital titles, tracking dependencies and coordinating deliverables across 15+ team members</li>
+                            <li>Contributed to bi-weekly milestone reviews, surfacing UX, tutorial, and engagement issues to keep development on schedule</li>
+                            <li>Identified gaps between design intent and user experience, reporting findings to producers, designers, and engineers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Core Classroom Instructor</h3>
+                                <p class="timeline-org">J PREP / J Institute</p>
+                            </div>
+                            <span class="timeline-date">2019 - 2023</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Designed and delivered game-based instruction for 100+ students per term across 10+ concurrent courses</li>
+                            <li>Iterated on curriculum, feedback structures, and progression strategies based on learner performance and engagement data</li>
+                            <li>Mentored 10+ instructors per term on iterative lesson design, assessment, and engagement strategies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>QA / Localization Coordinator</h3>
+                                <p class="timeline-org"><a href="https://www.keywordsstudios.com/en/about-us/global-offer/locations-studios/keywords-studios/asia-pacific/">Keywords International</a></p>
+                            </div>
+                            <span class="timeline-date">2017 - 2018</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Coordinated QA and localization pipelines for 4+ commercially shipped game releases per quarter</li>
+                            <li>Authored 150+ detailed bug reports enabling engineering teams to resolve 90% of critical issues pre-certification</li>
+                            <li>Supported J>E localization ensuring tutorial, UI/UX, and gameplay clarity for diverse end users</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Production Assistant</h3>
+                                <p class="timeline-org"><a href="https://17-bit.com">17-Bit Studios</a></p>
+                            </div>
+                            <span class="timeline-date">2016</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Supported sprint planning, backlog management, and milestone tracking across 3 titles in concurrent Agile/Scrum development</li>
+                            <li>Organized 17 internal design workshops covering industry trends, risk management, and production pipeline strategy</li>
+                            <li>Bridged communication between the development team and player community, synthesizing feedback into actionable recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Corporate Instructor / ALT</h3>
+                                <p class="timeline-org"><a href="https://www.udtrucks.com/unitedstates/about-us/company/company-profile">UD Trucks, </a><a href="https://www.english.metro.tokyo.lg.jp/">Tokyo Metropolitan Government, </a> <a href="https://www.mod.go.jp/asdf/en/">JASDF, </a><a href="https://www.tepco.co.jp/en/hd/index-e.html">TEPCO,</a> <a> etc. </a><a href="https://iesnet.com/">via IES</a></p>
+                            </div>
+                            <span class="timeline-date">2015-2019</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Designed and facilitated training programs for 30+ professionals per term across diverse industries and organizational contexts</li>
+                            <li>Created multi-layered evaluation outputs addressing learner, client, and stakeholder needs simultaneously</li>
+                            <li>Adapted content structure and delivery style to suit a wide range of professional audiences and organizational goals</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROJECTS / WORK ── -->
+    <section id="projects" class="section section-dark">
+        <div class="section-inner">
+            <h2 class="section-title">My Work</h2>
+
+            <!-- Category filter tabs -->
+            <div class="project-filters" role="group" aria-label="Filter projects">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="game-design">Game Design</button>
+                <button class="filter-tab" data-filter="analysis">Analysis</button>
+                <button class="filter-tab" data-filter="music">Music</button>
+                <button class="filter-tab" data-filter="academic">Academic</button>
+                <button class="filter-tab" data-filter="other">Other</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact" class="section section-light">
+        <div class="section-inner contact-inner">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <p class="contact-sub">
+                Please feel free to reach out with questions, quips, quotes or any other queries.
+            </p>
+            <a href="mailto:darrylehutchinson@msn.com" class="btn btn-primary contact-btn">Say Hello</a>
+            <div class="contact-socials">
+                <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.mixcloud.com/Cosmos_" target="_blank" aria-label="Mixcloud"><i class="fab fa-mixcloud"></i></a>
+                <a href="https://itch.io/" target="_blank" aria-label="itch.io"><i class="fab fa-itch-io"></i></a>
+                <a href="https://soundcloud.com/darryl_21/tracks" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+                <a href="mailto:darrylehutchinson@msn.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer id="footer">
+        <p>Designed &amp; Organized by <strong>Darryl H.</strong> &mdash; ©️<span id="footer-year"></span></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
