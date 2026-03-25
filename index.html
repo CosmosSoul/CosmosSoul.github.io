@@ -24,10 +24,10 @@
                 <i class="fas fa-sun"></i>
             </button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Work</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="assets/pdfs/resume.pdf" target="_blank" class="nav-resume-btn">Resume</a></li>
             </ul>
@@ -63,53 +63,23 @@
         </div>
     </section>
 
-    <!-- ── ABOUT ── -->
-    <section id="about" class="section section-light">
+    <!-- ── PROJECTS / WORK ── -->
+    <section id="projects" class="section section-light">
         <div class="section-inner">
-            <h2 class="section-title">About <span>Me</span></h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        I'm a <strong>game designer</strong> passionate about systems thinking, 
-                        player psychology, and interactive storytelling. I approach every project with 
-                        a critical eye for how mechanics and narrative intertwine to shape player experience.
-                    </p>
-                    <p>
-                        Outside of design, I produce electronic music and use it as a lens for 
-                        understanding rhythm, tension, and release — principles that translate directly 
-                        into pacing and feedback design in games.
-                    </p>
-                    <p>
-                        I'm currently looking for opportunities in game design, UX, or creative 
-                        strategy roles where I can bring both analytical rigour and creative intuition.
-                    </p>
-                    <!-- Quick-facts grid -->
-                    <ul class="about-facts">
-                        <li><i class="fas fa-map-marker-alt"></i> New York </li>
-                        <li><i class="fas fa-graduation-cap"></i>MS Games for Learning NYU</li>
-                        <!-- <li><i class="fas fa-briefcase"></i> Open to opportunities</li> -->
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:darrylehutchinson@msn.com">darrylehutchinson@msn.com</a></li>
-                    </ul>
-                </div>
-                <div class="about-skills-summary">
-                    <h3>What I Do</h3>
-                    <div class="tag-cloud">
-                        <span class="tag">Game Design</span>
-                        <span class="tag">Systems Design</span>
-                        <span class="tag">Learning Experience Design</span>
-                        <span class="tag">Onboarding</span>
-                        <span class="tag">Tutorialization</span>
-                        <span class="tag">Project Coordination</span>
-                        <span class="tag">Systems Design</span>
-                        <span class="tag">UX Research</span>
-                        <span class="tag">Design Analysis</span>
-                        <span class="tag">Prototyping</span>
-                        <span class="tag">Narrative Design</span>
-                        <span class="tag">Level Design</span>
-                        <span class="tag">Playtesting</span>
-                        <span class="tag">Unity</span>
-                    </div>
-                </div>
+            <h2 class="section-title">My Work</h2>
+
+            <!-- Category filter tabs -->
+            <div class="project-filters" role="group" aria-label="Filter projects">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="game-design">Game Design</button>
+                <button class="filter-tab" data-filter="analysis">Analysis</button>
+                <button class="filter-tab" data-filter="music">Music</button>
+                <button class="filter-tab" data-filter="academic">Academic</button>
+                <button class="filter-tab" data-filter="other">Other</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Cards injected by JS -->
             </div>
         </div>
     </section>
@@ -190,8 +160,59 @@
         </div>
     </section>
 
+    <!-- ── ABOUT ── -->
+    <section id="about" class="section section-light">
+        <div class="section-inner">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a <strong>game designer</strong> passionate about systems thinking, 
+                        player psychology, and interactive storytelling. I approach every project with 
+                        a critical eye for how mechanics and narrative intertwine to shape player experience.
+                    </p>
+                    <p>
+                        Outside of design, I produce electronic music and use it as a lens for 
+                        understanding rhythm, tension, and release — principles that translate directly 
+                        into pacing and feedback design in games.
+                    </p>
+                    <p>
+                        I'm currently looking for opportunities in game design, UX, or creative 
+                        strategy roles where I can bring both analytical rigour and creative intuition.
+                    </p>
+                    <!-- Quick-facts grid -->
+                    <ul class="about-facts">
+                        <li><i class="fas fa-map-marker-alt"></i> New York </li>
+                        <li><i class="fas fa-graduation-cap"></i>MS Games for Learning NYU</li>
+                        <!-- <li><i class="fas fa-briefcase"></i> Open to opportunities</li> -->
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:darrylehutchinson@msn.com">darrylehutchinson@msn.com</a></li>
+                    </ul>
+                </div>
+                <div class="about-skills-summary">
+                    <h3>What I Do</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">Game Design</span>
+                        <span class="tag">Systems Design</span>
+                        <span class="tag">Learning Experience Design</span>
+                        <span class="tag">Onboarding</span>
+                        <span class="tag">Tutorialization</span>
+                        <span class="tag">Project Coordination</span>
+                        <span class="tag">Systems Design</span>
+                        <span class="tag">UX Research</span>
+                        <span class="tag">Design Analysis</span>
+                        <span class="tag">Prototyping</span>
+                        <span class="tag">Narrative Design</span>
+                        <span class="tag">Level Design</span>
+                        <span class="tag">Playtesting</span>
+                        <span class="tag">Unity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ── EXPERIENCE ── -->
-    <section id="experience" class="section section-light">
+    <section id="experience" class="section section-dark">
         <div class="section-inner">
             <h2 class="section-title">Professional Experience</h2>
             <div class="timeline">
@@ -325,27 +346,6 @@
                     </div>
                 </div>
                 
-            </div>
-        </div>
-    </section>
-
-    <!-- ── PROJECTS / WORK ── -->
-    <section id="projects" class="section section-dark">
-        <div class="section-inner">
-            <h2 class="section-title">My Work</h2>
-
-            <!-- Category filter tabs -->
-            <div class="project-filters" role="group" aria-label="Filter projects">
-                <button class="filter-tab active" data-filter="all">All</button>
-                <button class="filter-tab" data-filter="game-design">Game Design</button>
-                <button class="filter-tab" data-filter="analysis">Analysis</button>
-                <button class="filter-tab" data-filter="music">Music</button>
-                <button class="filter-tab" data-filter="academic">Academic</button>
-                <button class="filter-tab" data-filter="other">Other</button>
-            </div>
-
-            <div class="projects-grid" id="projects-grid">
-                <!-- Cards injected by JS -->
             </div>
         </div>
     </section>

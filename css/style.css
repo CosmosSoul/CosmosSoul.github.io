@@ -578,10 +578,12 @@ html[data-theme="light"] .theme-toggle:hover { background: rgba(245,158,11,0.1);
     border: 1px solid var(--border);
     display: flex;
     flex-direction: column;
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
     box-shadow: var(--shadow);
+    cursor: pointer;
 }
 .project-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+.project-card[data-expanded="true"] { border-color: var(--accent); }
 .project-card.hidden { display: none; }
 
 .project-thumb {
@@ -635,13 +637,14 @@ html[data-theme="light"] .theme-toggle:hover { background: rgba(245,158,11,0.1);
     font-size: 0.88rem;
     color: var(--text-muted);
     line-height: 1.65;
-    flex: 1;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 .project-links {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 8px;
 }
 .project-link {
     padding: 8px 18px;

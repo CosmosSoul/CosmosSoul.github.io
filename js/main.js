@@ -19,6 +19,56 @@ const projects = [
         ]
     },
     {
+        id: "game-design-puzzle-prototype",
+        title: "School Project — Puzzle Game Prototype",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",
+        emoji: "🧩",
+        description: "Coming soon.",
+        links: [
+            { text: "View Design Doc", url: "#", icon: "fa-file-alt", style: "solid" },
+            { text: "Play Prototype",  url: "#", icon: "fa-gamepad",  style: "ghost" }
+        ]
+    },
+    {
+        id: "game-design-reading-prototype",
+        title: "School Project — Reading Game Prototype",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",
+        emoji: "📚",
+        description: "Coming soon.",
+        links: [
+            { text: "View Design Doc", url: "#", icon: "fa-file-alt", style: "solid" },
+            { text: "Play Prototype",  url: "#", icon: "fa-gamepad",  style: "ghost" }
+        ]
+    },
+    {
+        id: "rework-ffxiv",
+        title: "Game Design Rework — Final Fantasy XIV",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",
+        emoji: "⚔️",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "rework-super-mario-maker",
+        title: "Game Design Rework — Super Mario Maker",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",
+        emoji: "🍄",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
         id: "analysis-1",
         title: "Design Analysis: Narrative Structures in Indie Games",
         category: "analysis",
@@ -31,7 +81,7 @@ const projects = [
         ]
     },
     {
-        id: "analysis-1",
+        id: "analysis-shinobi",
         title: "Design Analysis - Shinobi: Art of Vengeance",
         category: "analysis",
         year: 2025,
@@ -40,6 +90,150 @@ const projects = [
         description: "When combat fights against combatants",
         links: [
             { text: "Read PDF", url: "assets/pdfs/GameXP.Shinobi.UPLOAD.pdf", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-arc-raiders",
+        title: "Design Analysis - Arc Raiders",
+        category: "analysis",
+        year: 2025,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-absolum",
+        title: "Design Analysis - Absolum",
+        category: "analysis",
+        year: 2025,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-re-village",
+        title: "Design Analysis - Resident Evil Village",
+        category: "analysis",
+        year: 2025,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-elden-ring-nightreign",
+        title: "Design Analysis - Elden Ring Nightreign",
+        category: "analysis",
+        year: 2025,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-clair-obscur",
+        title: "Design Analysis - Clair Obscur: Expedition 33",
+        category: "analysis",
+        year: 2025,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-animal-well",
+        title: "Design Analysis - Animal Well",
+        category: "analysis",
+        year: 2025,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-chrono-trigger",
+        title: "Design Analysis - Chrono Trigger",
+        category: "analysis",
+        year: 2025,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-wow-midnight",
+        title: "Design Analysis - WoW Midnight",
+        category: "analysis",
+        year: 2025,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-turing-test",
+        title: "Design Analysis - The Turing Test",
+        category: "analysis",
+        year: 2024,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-ff7-remake",
+        title: "Design Analysis - Final Fantasy VII Remake",
+        category: "analysis",
+        year: 2024,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-pokemon-arceus",
+        title: "Design Analysis - Pokémon Legends: Arceus",
+        category: "analysis",
+        year: 2024,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "analysis-control",
+        title: "Design Analysis - Control",
+        category: "analysis",
+        year: 2024,
+        thumbnail: "",
+        emoji: "📖",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
         ]
     },
     {
@@ -245,6 +439,7 @@ function renderProjects(filter = "all") {
         const card = document.createElement("article");
         card.className = "project-card fade-in";
         card.dataset.category = p.category;
+        card.dataset.expanded = "false";
 
         const thumb = p.thumbnail
             ? `<img class="project-thumb" src="${p.thumbnail}" alt="${p.title}" loading="lazy">`
@@ -253,7 +448,7 @@ function renderProjects(filter = "all") {
                 : `<div class="project-thumb-placeholder">${p.emoji || CATEGORY_EMOJI[p.category] || "⚡"}</div>`;
 
         const linksHtml = (p.links || []).map(l =>
-            `<a href="${l.url}" class="project-link ${l.style}" ${l.url.startsWith("http") ? 'target="_blank" rel="noopener"' : ''}>
+            `<a href="${l.url}" class="project-link ${l.style}" ${(l.url.startsWith("http") || l.url.endsWith(".pdf")) ? 'target="_blank" rel="noopener"' : ''}>
                 <i class="fas ${l.icon}"></i> ${l.text}
             </a>`
         ).join("");
@@ -264,10 +459,34 @@ function renderProjects(filter = "all") {
                 <p class="project-category">${p.category.replace("-", " ")} &middot; ${p.year}</p>
                 <h3 class="project-title">${p.title}</h3>
                 <p class="project-desc">${p.description}</p>
-                <div class="project-links">${linksHtml}</div>
+                <div class="project-links" style="display: none;">${linksHtml}</div>
             </div>`;
 
         grid.appendChild(card);
+
+        // Add click handler for the entire card
+        const links = card.querySelector(".project-links");
+
+        card.addEventListener("click", (e) => {
+            // Don't toggle if clicking on a link
+            if (e.target.closest(".project-link")) {
+                return;
+            }
+            
+            const isExpanded = card.dataset.expanded === "true";
+            
+            if (isExpanded) {
+                // Collapse
+                card.dataset.expanded = "false";
+                card.setAttribute("aria-expanded", "false");
+                links.style.display = "none";
+            } else {
+                // Expand
+                card.dataset.expanded = "true";
+                card.setAttribute("aria-expanded", "true");
+                links.style.display = "flex";
+            }
+        });
     });
 
     // Re-init fade-in for newly added cards
