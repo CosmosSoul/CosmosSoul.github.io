@@ -5,69 +5,21 @@
 // ── PROJECT DATA ─────────────────────────────────────────
 // Add your real projects here. Categories: game-design, analysis, music, academic, other
 const projects = [
+    // ── 2026 ──────────────────────────────────────────────
     {
-        id: "game-design-1",
-        title: "Example Game Design Project",
+        id: "game-design-assimulation",
+        title: "Assimulation",
         category: "game-design",
-        year: 2024,
-        thumbnail: "",        // put "assets/images/your-image.png" here
+        year: 2026,
+        thumbnail: "",
         emoji: "🎮",
-        description: "A short description of your game design project — what it is, what you designed, and what makes it interesting.",
-        links: [
-            { text: "View Slides", url: "#", icon: "fa-file-powerpoint", style: "solid" },
-            { text: "Play Demo",   url: "#", icon: "fa-gamepad",         style: "ghost" }
-        ]
-    },
-    {
-        id: "game-design-puzzle-prototype",
-        title: "School Project — Puzzle Game Prototype",
-        category: "game-design",
-        year: 2024,
-        thumbnail: "",
-        emoji: "🧩",
         description: "Coming soon.",
+        itchEmbed: "https://itch.io/embed-upload/16341037?color=333333&border_width=0&border_radius=0",  // paste your Itch.io embed URL here, e.g. "https://itch.io/embed-upload/XXXXXX"
         links: [
-            { text: "View Design Doc", url: "#", icon: "fa-file-alt", style: "solid" },
-            { text: "Play Prototype",  url: "#", icon: "fa-gamepad",  style: "ghost" }
+            { text: "Play on Itch.io", url: "https://sam-youll.itch.io/assimulation", icon: "fa-gamepad", style: "solid" }
         ]
     },
-    {
-        id: "game-design-reading-prototype",
-        title: "School Project — Reading Game Prototype",
-        category: "game-design",
-        year: 2024,
-        thumbnail: "",
-        emoji: "📚",
-        description: "Coming soon.",
-        links: [
-            { text: "View Design Doc", url: "#", icon: "fa-file-alt", style: "solid" },
-            { text: "Play Prototype",  url: "#", icon: "fa-gamepad",  style: "ghost" }
-        ]
-    },
-    {
-        id: "rework-ffxiv",
-        title: "Game Design Rework — Final Fantasy XIV",
-        category: "game-design",
-        year: 2024,
-        thumbnail: "",
-        emoji: "⚔️",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
-    },
-    {
-        id: "rework-super-mario-maker",
-        title: "Game Design Rework — Super Mario Maker",
-        category: "game-design",
-        year: 2024,
-        thumbnail: "",
-        emoji: "🍄",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
-    },
+    // ── 2025 ──────────────────────────────────────────────
     {
         id: "analysis-1",
         title: "Design Analysis: Narrative Structures in Indie Games",
@@ -189,6 +141,108 @@ const projects = [
         ]
     },
     {
+        id: "music-0.7",
+        title: "Vol 0.7 — Electronic Mix",
+        category: "music",
+        year: 2025,
+        thumbnail: "",
+        emoji: "🎧",
+        description: "90-minute mix blending house, techno, and ambient electronica. Recorded live.",
+        embed: `<iframe width="100%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FCosmos_%2Fmix-v07%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"></iframe>`,
+        links: [
+            { text: "Listen on Mixcloud", url: "https://www.mixcloud.com/Cosmos_/mix-v07/", icon: "fa-headphones", style: "solid" }
+        ]
+    },
+    {
+        id: "music-0.6",
+        title: "Vol 0.6 — Electronic Mix",
+        category: "music",
+        year: 2025,
+        thumbnail: "",
+        emoji: "🎧",
+        description: "90-minute mix blending house, techno, and ambient electronica. Recorded live.",
+        embed:`<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1855351530&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/darryl_21" title="Cosmos_" target="_blank" style="color: #cccccc; text-decoration: none;">Cosmos_</a> · <a href="https://soundcloud.com/darryl_21/mix-vol-06" title="Mix v0.6" target="_blank" style="color: #cccccc; text-decoration: none;">Mix v0.6</a></div>`,
+        links: [
+            { text: "Listen on SoundCloud", url: "https://soundcloud.com/darryl_21/mix-vol-06", icon: "fa-headphones", style: "solid" }
+        ]
+    },
+    // ── 2024 ──────────────────────────────────────────────
+    {
+        id: "game-design-1",
+        title: "Example Game Design Project",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",        // put "assets/images/your-image.png" here
+        emoji: "🎮",
+        description: "A short description of your game design project — what it is, what you designed, and what makes it interesting.",
+        links: [
+            { text: "View Slides", url: "#", icon: "fa-file-powerpoint", style: "solid" },
+            { text: "Play Demo",   url: "#", icon: "fa-gamepad",         style: "ghost" }
+        ]
+    },
+    {
+        id: "game-design-puzzle-prototype",
+        title: "School Project — Puzzle Game Prototype",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",
+        emoji: "🧩",
+        description: "Coming soon.",
+        links: [
+            { text: "View Design Doc", url: "#", icon: "fa-file-alt", style: "solid" },
+            { text: "Play Prototype",  url: "#", icon: "fa-gamepad",  style: "ghost" }
+        ]
+    },
+    {
+        id: "game-design-reading-prototype",
+        title: "School Project — Reading Game Prototype",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",
+        emoji: "📚",
+        description: "Coming soon.",
+        links: [
+            { text: "View Design Doc", url: "#", icon: "fa-file-alt", style: "solid" },
+            { text: "Play Prototype",  url: "#", icon: "fa-gamepad",  style: "ghost" }
+        ]
+    },
+    {
+        id: "rework-ffxiv",
+        title: "Game Design Rework — Final Fantasy XIV",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",
+        emoji: "⚔️",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "rework-super-mario-maker",
+        title: "Game Design Rework — Super Mario Maker",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",
+        emoji: "🍄",
+        description: "Coming soon.",
+        links: [
+            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
+        ]
+    },
+    {
+        id: "game-design-2",
+        title: "Game Prototype — Puzzle Mechanic",
+        category: "game-design",
+        year: 2024,
+        thumbnail: "",
+        emoji: "🧩",
+        description: "A playable prototype exploring spatial reasoning and environmental storytelling through minimalist puzzle design.",
+        links: [
+            { text: "Play Prototype", url: "#", icon: "fa-play", style: "solid" }
+        ]
+    },
+    {
         id: "analysis-turing-test",
         title: "Design Analysis - The Turing Test",
         category: "analysis",
@@ -237,18 +291,18 @@ const projects = [
         ]
     },
     {
-        id: "music-0.7",
-        title: "Vol 0.7 — Electronic Mix",
-        category: "music",
-        year: 2025,
+        id: "analysis-2",
+        title: "Design Proposal: Adaptive Difficulty System",
+        category: "analysis",
+        year: 2024,
         thumbnail: "",
-        emoji: "🎧",
-        description: "90-minute mix blending house, techno, and ambient electronica. Recorded live.",
-        embed: `<iframe width="100%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FCosmos_%2Fmix-v07%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"></iframe>`,
+        emoji: "📊",
+        description: "A design proposal outlining a data-driven adaptive difficulty framework for mid-core mobile games.",
         links: [
-            { text: "Listen on Mixcloud", url: "https://www.mixcloud.com/Cosmos_/mix-v07/", icon: "fa-headphones", style: "solid" }
+            { text: "View PDF", url: "assets/pdfs/proposal.pdf", icon: "fa-file-pdf", style: "solid" }
         ]
     },
+    // ── 2023 ──────────────────────────────────────────────
     {
         id: "academic-1",
         title: "Academic Paper: Player Agency vs. Authorial Intent",
@@ -261,43 +315,7 @@ const projects = [
             { text: "Download PDF", url: "assets/pdfs/paper.pdf", icon: "fa-download", style: "solid" }
         ]
     },
-    {
-        id: "music-0.6",
-        title: "Vol 0.6 — Electronic Mix",
-        category: "music",
-        year: 2025,
-        thumbnail: "",
-        emoji: "🎧",
-        description: "90-minute mix blending house, techno, and ambient electronica. Recorded live.",
-        embed:`<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1855351530&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/darryl_21" title="Cosmos_" target="_blank" style="color: #cccccc; text-decoration: none;">Cosmos_</a> · <a href="https://soundcloud.com/darryl_21/mix-vol-06" title="Mix v0.6" target="_blank" style="color: #cccccc; text-decoration: none;">Mix v0.6</a></div>`,
-        links: [
-            { text: "Listen on SoundCloud", url: "https://soundcloud.com/darryl_21/mix-vol-06", icon: "fa-headphones", style: "solid" }
-        ]
-    },
-    {
-        id: "game-design-2",
-        title: "Game Prototype — Puzzle Mechanic",
-        category: "game-design",
-        year: 2024,
-        thumbnail: "",
-        emoji: "🧩",
-        description: "A playable prototype exploring spatial reasoning and environmental storytelling through minimalist puzzle design.",
-        links: [
-            { text: "Play Prototype", url: "#", icon: "fa-play", style: "solid" }
-        ]
-    },
-    {
-        id: "analysis-2",
-        title: "Design Proposal: Adaptive Difficulty System",
-        category: "analysis",
-        year: 2024,
-        thumbnail: "",
-        emoji: "📊",
-        description: "A design proposal outlining a data-driven adaptive difficulty framework for mid-core mobile games.",
-        links: [
-            { text: "View PDF", url: "assets/pdfs/proposal.pdf", icon: "fa-file-pdf", style: "solid" }
-        ]
-    },
+    // ── 2020 ──────────────────────────────────────────────
     {
         id: "music-0.2",
         title: "Vol 0.2 — Electronic Mix",
@@ -309,6 +327,20 @@ const projects = [
         embed:`<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1003790935&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/darryl_21" title="Cosmos_" target="_blank" style="color: #cccccc; text-decoration: none;">Cosmos_</a> · <a href="https://soundcloud.com/darryl_21/mix-v02" title="Mix v0.2" target="_blank" style="color: #cccccc; text-decoration: none;">Mix v0.2</a></div>`,
         links: [
             { text: "Listen on SoundCloud", url: "https://soundcloud.com/darryl_21/mix-v02", icon: "fa-headphones", style: "solid" }
+        ]
+    },
+    // ── 2018 ──────────────────────────────────────────────
+    {
+        id: "game-design-shooter-prototype",
+        title: "Shooter Prototype",
+        category: "game-design",
+        year: 2018,
+        thumbnail: "",
+        emoji: "🔫",
+        description: "Coming soon.",
+        itchEmbed: "https://itch.io/embed-upload/1044737?color=333333",
+        links: [
+            { text: "Play on Itch.io", url: "https://cosmos-soul.itch.io/shooter-protoype", icon: "fa-gamepad", style: "solid" }
         ]
     },
 ];
@@ -447,11 +479,24 @@ function renderProjects(filter = "all") {
                 ? `<div class="project-embed">${p.embed}</div>`
                 : `<div class="project-thumb-placeholder">${p.emoji || CATEGORY_EMOJI[p.category] || "⚡"}</div>`;
 
+        const pdfLink = (p.links || []).find(l => l.url.endsWith(".pdf") && l.url !== "#");
+        const previewBtn = pdfLink
+            ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
+                   <i class="fas fa-eye"></i> Preview
+               </button>`
+            : "";
+
+        const playBtn = p.itchEmbed
+            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed}" data-title="${p.title}" data-type="game">
+                   <i class="fas fa-play"></i> Play in Browser
+               </button>`
+            : "";
+
         const linksHtml = (p.links || []).map(l =>
             `<a href="${l.url}" class="project-link ${l.style}" ${(l.url.startsWith("http") || l.url.endsWith(".pdf")) ? 'target="_blank" rel="noopener"' : ''}>
                 <i class="fas ${l.icon}"></i> ${l.text}
             </a>`
-        ).join("");
+        ).join("") + previewBtn + playBtn;
 
         card.innerHTML = `
             ${thumb}
@@ -468,6 +513,14 @@ function renderProjects(filter = "all") {
         const links = card.querySelector(".project-links");
 
         card.addEventListener("click", (e) => {
+            // Open embed modal when clicking preview or play button
+            const previewBtn = e.target.closest(".project-preview-btn");
+            if (previewBtn) {
+                e.stopPropagation();
+                window.openEmbedModal(previewBtn.dataset.embed, previewBtn.dataset.title, previewBtn.dataset.type);
+                return;
+            }
+
             // Don't toggle if clicking on a link
             if (e.target.closest(".project-link")) {
                 return;
@@ -528,6 +581,43 @@ function initThemeToggle() {
     });
 }
 
+// ── EMBED MODAL (PDFs + Itch.io games) ────────────────────
+function initPdfModal() {
+    const modal     = document.getElementById("pdf-modal");
+    const container = modal.querySelector(".pdf-modal-container");
+    const frame     = document.getElementById("pdf-modal-frame");
+    const title     = document.getElementById("pdf-modal-title");
+    const closeBtn  = document.getElementById("pdf-modal-close");
+    const backdrop  = modal.querySelector(".pdf-modal-backdrop");
+    if (!modal) return;
+
+    window.openEmbedModal = function(url, label, type) {
+        title.textContent = label || "Preview";
+        frame.src = url;
+        // Games get more vertical space than documents
+        container.dataset.type = type || "pdf";
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+        closeBtn.focus();
+    };
+
+    // Keep old name working just in case
+    window.openPdfModal = (url, label) => window.openEmbedModal(url, label, "pdf");
+
+    function closeModal() {
+        modal.hidden = true;
+        frame.src = "";
+        document.body.style.overflow = "";
+        delete container.dataset.type;
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+    backdrop.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.hidden) closeModal();
+    });
+}
+
 // ── FOOTER YEAR ───────────────────────────────────────────
 function setYear() {
     const el = document.getElementById("footer-year");
@@ -543,5 +633,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProjects();
     initProjectFilters();
     initFadeIn();
+    initPdfModal();
     setTimeout(typeRole, 500);
 });

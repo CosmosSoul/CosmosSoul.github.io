@@ -374,6 +374,22 @@
         <p>Designed &amp; Organized by <strong>Darryl H.</strong> &mdash; ©️<span id="footer-year"></span></p>
     </footer>
 
+    <!-- ── PDF PREVIEW MODAL ── -->
+    <div id="pdf-modal" class="pdf-modal" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title" hidden>
+        <div class="pdf-modal-backdrop"></div>
+        <div class="pdf-modal-container">
+            <div class="pdf-modal-header">
+                <span id="pdf-modal-title" class="pdf-modal-title"></span>
+                <button id="pdf-modal-close" class="pdf-modal-close" aria-label="Close preview">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdf-modal-frame" src="" title="PDF Preview" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

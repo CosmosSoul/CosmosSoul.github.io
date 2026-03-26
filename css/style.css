@@ -662,6 +662,115 @@ html[data-theme="light"] .theme-toggle:hover { background: rgba(245,158,11,0.1);
 .project-link.ghost { border: 1.5px solid var(--accent); color: var(--accent); }
 .project-link.ghost:hover { background: var(--accent); color: #fff; }
 
+/* ── PDF PREVIEW MODAL ── */
+.pdf-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.pdf-modal[hidden] { display: none; }
+
+.pdf-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    animation: modal-fade-in 0.2s ease;
+}
+
+.pdf-modal-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 720px;
+    height: 70vh;
+    background: var(--navy-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    animation: modal-slide-in 0.25s ease;
+    overflow: hidden;
+}
+
+.pdf-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    gap: 12px;
+}
+
+.pdf-modal-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pdf-modal-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    border: 1.5px solid var(--border);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+.pdf-modal-close:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(0, 180, 216, 0.1);
+}
+
+.pdf-modal-body {
+    flex: 1;
+    overflow: hidden;
+}
+.pdf-modal-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+@keyframes modal-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes modal-slide-in {
+    from { opacity: 0; transform: translateY(16px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+/* Game embeds get more space */
+.pdf-modal-container[data-type="game"] {
+    max-width: 1000px;
+    height: 82vh;
+}
+
+html[data-theme="light"] .pdf-modal-container { background: var(--light-card); }
+html[data-theme="light"] .pdf-modal-title { color: var(--text-dark); }
+
+@media (max-width: 640px) {
+    .pdf-modal { padding: 0; }
+    .pdf-modal-container { height: 100dvh; border-radius: 0; }
+}
+
 /* ── CONTACT ── */
 .contact-inner { text-align: center; max-width: 640px; }
 .contact-sub {
