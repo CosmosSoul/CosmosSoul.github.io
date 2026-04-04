@@ -455,23 +455,15 @@ const CATEGORY_EMOJI = {
     "other":       "⚡"
 };
 
-function renderProjects(filter = "all") {
+function renderProjects() {
     const grid = document.getElementById("projects-grid");
     if (!grid) return;
     grid.innerHTML = "";
 
-    const filtered = filter === "all" ? projects : projects.filter(p => p.category === filter);
-
-    if (filtered.length === 0) {
-        grid.innerHTML = `<p style="color:var(--text-muted);text-align:center;grid-column:1/-1;padding:40px 0;">No projects in this category yet.</p>`;
-        return;
-    }
-
-    filtered.forEach(p => {
+    projects.forEach(p => {
         const card = document.createElement("article");
         card.className = "project-card fade-in";
         card.dataset.category = p.category;
-        card.dataset.expanded = "false";
 
         const thumb = p.thumbnail
             ? `<img class="project-thumb" src="${p.thumbnail}" alt="${p.title}" loading="lazy">`
@@ -504,16 +496,14 @@ function renderProjects(filter = "all") {
                 <p class="project-category">${p.category.replace("-", " ")} &middot; ${p.year}</p>
                 <h3 class="project-title">${p.title}</h3>
                 <p class="project-desc">${p.description}</p>
+                ${p.summary ? `<p class="project-summary">${p.summary}</p>` : ""}
                 <div class="project-links" style="display: none;">${linksHtml}</div>
+                <span class="project-collapse-hint">Click to collapse</span>
             </div>`;
 
         grid.appendChild(card);
 
-        // Add click handler for the entire card
-        const links = card.querySelector(".project-links");
-
         card.addEventListener("click", (e) => {
-            // Open embed modal when clicking preview or play button
             const previewBtn = e.target.closest(".project-preview-btn");
             if (previewBtn) {
                 e.stopPropagation();
@@ -521,29 +511,64 @@ function renderProjects(filter = "all") {
                 return;
             }
 
-            // Don't toggle if clicking on a link
-            if (e.target.closest(".project-link")) {
-                return;
-            }
-            
-            const isExpanded = card.dataset.expanded === "true";
-            
-            if (isExpanded) {
-                // Collapse
-                card.dataset.expanded = "false";
-                card.setAttribute("aria-expanded", "false");
-                links.style.display = "none";
-            } else {
-                // Expand
-                card.dataset.expanded = "true";
-                card.setAttribute("aria-expanded", "true");
-                links.style.display = "flex";
+            if (e.target.closest(".project-link")) return;
+
+            const isExpanded = card.classList.contains("expanded");
+
+            // Collapse any other expanded card first
+            document.querySelectorAll(".project-card.expanded").forEach(c => {
+                c.classList.remove("expanded");
+                c.style.gridColumn = "";
+                c.style.gridRow    = "";
+                c.querySelector(".project-links").style.display = "none";
+            });
+
+            if (!isExpanded) {
+                // Only consider visible (non-hidden) cards for column calculation
+                const gridEl   = card.parentElement;
+                const allCards = Array.from(gridEl.querySelectorAll(".project-card:not(.card-hidden)"));
+                const colCount = getComputedStyle(gridEl).gridTemplateColumns.split(" ").length;
+
+                if (colCount > 1) {
+                    const cardIndex = allCards.indexOf(card);
+                    const colIndex  = cardIndex % colCount;
+                    const isLastCol = colIndex === colCount - 1;
+
+                    if (isLastCol) {
+                        // Pin the row explicitly so the card doesn't drift to the next
+                        // row when its column start shifts left (CSS Grid would otherwise
+                        // look for the next available slot at those columns).
+                        const rowIndex = Math.floor(cardIndex / colCount) + 1;
+                        card.style.gridColumn = `${colCount - 1} / span 2`;
+                        card.style.gridRow    = `${rowIndex}`;
+                    } else {
+                        card.style.gridColumn = "span 2";
+                    }
+                }
+
+                card.classList.add("expanded");
+                card.querySelector(".project-links").style.display = "flex";
+                card.scrollIntoView({ behavior: "smooth", block: "nearest" });
             }
         });
     });
 
-    // Re-init fade-in for newly added cards
     initFadeIn();
+}
+
+function filterProjects(filter) {
+    // Collapse any expanded card before filtering
+    document.querySelectorAll(".project-card.expanded").forEach(c => {
+        c.classList.remove("expanded");
+        c.style.gridColumn = "";
+        c.style.gridRow    = "";
+        c.querySelector(".project-links").style.display = "none";
+    });
+
+    document.querySelectorAll(".project-card").forEach(card => {
+        const matches = filter === "all" || card.dataset.category === filter;
+        card.classList.toggle("card-hidden", !matches);
+    });
 }
 
 function initProjectFilters() {
@@ -552,7 +577,7 @@ function initProjectFilters() {
         tab.addEventListener("click", () => {
             tabs.forEach(t => t.classList.remove("active"));
             tab.classList.add("active");
-            renderProjects(tab.dataset.filter);
+            filterProjects(tab.dataset.filter);
         });
     });
 }
@@ -578,6 +603,67 @@ function initThemeToggle() {
         const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
         localStorage.setItem("theme", next);
         applyTheme(next);
+    });
+}
+
+// ── PROJECT DETAIL MODAL ──────────────────────────────────
+function initProjectModal() {
+    const modal    = document.getElementById("project-modal");
+    const backdrop = modal.querySelector(".project-modal-backdrop");
+    const closeBtn = document.getElementById("project-modal-close");
+    const thumbEl  = document.getElementById("project-modal-thumb");
+    const metaEl   = document.getElementById("project-modal-meta");
+    const titleEl  = document.getElementById("project-modal-title");
+    const descEl   = document.getElementById("project-modal-desc");
+    const summaryEl= document.getElementById("project-modal-summary");
+    const linksEl  = document.getElementById("project-modal-links");
+    if (!modal) return;
+
+    window.openProjectModal = function(p) {
+        thumbEl.textContent = p.emoji || CATEGORY_EMOJI[p.category] || "⚡";
+        metaEl.textContent  = `${p.category.replace("-", " ")} · ${p.year}`;
+        titleEl.textContent = p.title;
+        descEl.textContent  = p.description;
+        summaryEl.textContent = p.summary || "";
+
+        const pdfLink = (p.links || []).find(l => l.url.endsWith(".pdf") && l.url !== "#");
+        const previewBtn = pdfLink
+            ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
+                   <i class="fas fa-eye"></i> Preview
+               </button>`
+            : "";
+        const playBtn = p.itchEmbed
+            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed}" data-title="${p.title}" data-type="game">
+                   <i class="fas fa-play"></i> Play in Browser
+               </button>`
+            : "";
+        linksEl.innerHTML = (p.links || []).map(l =>
+            `<a href="${l.url}" class="project-link ${l.style}" ${(l.url.startsWith("http") || l.url.endsWith(".pdf")) ? 'target="_blank" rel="noopener"' : ''}>
+                <i class="fas ${l.icon}"></i> ${l.text}
+            </a>`
+        ).join("") + previewBtn + playBtn;
+
+        // Wire up preview/play buttons inside the detail modal
+        linksEl.querySelectorAll(".project-preview-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                window.openEmbedModal(btn.dataset.embed, btn.dataset.title, btn.dataset.type);
+            });
+        });
+
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+        closeBtn.focus();
+    };
+
+    function closeModal() {
+        modal.hidden = true;
+        document.body.style.overflow = "";
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+    backdrop.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.hidden) closeModal();
     });
 }
 
@@ -633,6 +719,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProjects();
     initProjectFilters();
     initFadeIn();
+    initProjectModal();
     initPdfModal();
     setTimeout(typeRole, 500);
 });
