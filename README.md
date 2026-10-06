@@ -66,7 +66,7 @@ Copy this object into the `projects` array in `js/main.js`:
 ```
 
 ### Adding your resume
-Drop your PDF into `assets/pdfs/resume.pdf`. The navbar and hero buttons already link to it.
+Drop your PDF into `assets/pdfs/DarrylH-Resume.pdf`. The navbar and hero buttons already link to it.
 
 ### Adding your photo
 Drop your photo into `assets/images/profile.jpg`.  
