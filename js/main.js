@@ -1,9 +1,11 @@
 /* =========================================================
-   Portfolio v2 — main.js
+   Portfolio v3 — main.js
    ========================================================= */
 
 // ── PROJECT DATA ─────────────────────────────────────────
-// Add your real projects here. Categories: game-design, analysis, music, academic, other
+// Categories: game-design, analysis, music, academic, other
+// Set published: false to keep a card in this file without showing it.
+// Leave links empty until a real file or URL exists — "#" buttons are not rendered.
 const projects = [
     // ── 2026 ──────────────────────────────────────────────
     {
@@ -12,142 +14,116 @@ const projects = [
         category: "game-design",
         year: 2026,
         thumbnail: "",
-        emoji: "🎮",
-        description: "Coming soon.",
-        itchEmbed: "https://itch.io/embed-upload/16341037?color=333333&border_width=0&border_radius=0",  // paste your Itch.io embed URL here, e.g. "https://itch.io/embed-upload/XXXXXX"
+        emoji: "🎭",
+        description: "A Global Game Jam 2026 social sim: assign masks from NPC thoughts and keep a festival from collapsing as happiness spreads — or sours.",
+        summary: "Made with Sam You'll and Lendelacreme in Unity. Players click NPCs to read their thoughts, drag on a fitting mask, and watch shade-of-grey happiness rise or fall through social interactions. A wrong mask can be mashed off and retried — but let happiness drop too far and the festival suffers.",
+        itchEmbed: "https://itch.io/embed-upload/16341037?color=333333&border_width=0&border_radius=0",
         links: [
             { text: "Play on Itch.io", url: "https://sam-youll.itch.io/assimulation", icon: "fa-gamepad", style: "solid" }
         ]
     },
     // ── 2025 ──────────────────────────────────────────────
     {
-        id: "analysis-1",
-        title: "Design Analysis: Narrative Structures in Indie Games",
-        category: "analysis",
-        year: 2025,
-        thumbnail: "",
-        emoji: "📖",
-        description: "A deep-dive analysis of non-linear storytelling in contemporary indie games, examining how mechanics and narrative intertwine.",
-        links: [
-            { text: "Read PDF", url: "assets/pdfs/analysis.pdf", icon: "fa-file-pdf", style: "solid" }
-        ]
-    },
-    {
         id: "analysis-shinobi",
-        title: "Design Analysis - Shinobi: Art of Vengeance",
+        title: "Design Analysis — Shinobi: Art of Vengeance",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "📖",
-        description: "When combat fights against combatants",
+        emoji: "🗡️",
+        description: "When combat fights against combatants — a close read of Shinobi: Art of Vengeance's encounter design.",
+        summary: "A GameXP-style write-up on how combat systems, enemy roles, and player expression support — or undercut — each other in Treasure's revival of Shinobi.",
         links: [
             { text: "Read PDF", url: "assets/pdfs/GameXP.Shinobi.UPLOAD.pdf", icon: "fa-file-pdf", style: "solid" }
         ]
     },
     {
         id: "analysis-arc-raiders",
-        title: "Design Analysis - Arc Raiders",
+        title: "Design Analysis — Arc Raiders",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "📡",
+        description: "Extraction tension, squad communication, and how PvPvE risk shapes every raid decision.",
+        links: []
     },
     {
         id: "analysis-absolum",
-        title: "Design Analysis - Absolum",
+        title: "Design Analysis — Absolum",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "👊",
+        description: "Beat 'em up encounter pacing, co-op readability, and how Absolum teaches its combat vocabulary.",
+        links: []
     },
     {
         id: "analysis-re-village",
-        title: "Design Analysis - Resident Evil Village",
+        title: "Design Analysis — Resident Evil Village",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "🏰",
+        description: "Resource pressure, first-person survival horror, and how Village moves between exploration and set-piece combat.",
+        links: []
     },
     {
         id: "analysis-elden-ring-nightreign",
-        title: "Design Analysis - Elden Ring Nightreign",
+        title: "Design Analysis — Elden Ring Nightreign",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "🌙",
+        description: "How Nightreign retools Elden Ring's combat for co-op, session-based runs.",
+        links: []
     },
     {
         id: "analysis-clair-obscur",
-        title: "Design Analysis - Clair Obscur: Expedition 33",
+        title: "Design Analysis — Clair Obscur: Expedition 33",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "🎨",
+        description: "Turn-based timing, party identity, and how Expedition 33 gives mechanical encounters narrative weight.",
+        links: []
     },
     {
         id: "analysis-animal-well",
-        title: "Design Analysis - Animal Well",
+        title: "Design Analysis — Animal Well",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "🐸",
+        description: "Secret density and environmental teaching — how Animal Well onboards through space instead of text.",
+        links: []
     },
     {
         id: "analysis-chrono-trigger",
-        title: "Design Analysis - Chrono Trigger",
+        title: "Design Analysis — Chrono Trigger",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "⏳",
+        description: "Double techs, encounter rhythm, and how combat supports a time-travel narrative.",
+        links: []
     },
     {
         id: "analysis-wow-midnight",
-        title: "Design Analysis - WoW Midnight",
+        title: "Design Analysis — World of Warcraft: Midnight",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "🐺",
+        description: "Notes on upcoming expansion systems — onboarding, activity structure, and how Midnight frames new player goals.",
+        links: []
     },
     {
         id: "music-0.7",
-        title: "Vol 0.7 — Electronic Mix",
+        title: "Vol 0.7 — Jazz-Hop Mix",
         category: "music",
         year: 2025,
         thumbnail: "",
         emoji: "🎧",
-        description: "90-minute mix blending house, techno, and ambient electronica. Recorded live.",
+        description: "A live jazz-hop and downtempo mix — Nujabes, Freddie Joachim, Toonorth, Middle School, and more.",
         embed: `<iframe width="100%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FCosmos_%2Fmix-v07%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"></iframe>`,
         links: [
             { text: "Listen on Mixcloud", url: "https://www.mixcloud.com/Cosmos_/mix-v07/", icon: "fa-headphones", style: "solid" }
@@ -155,12 +131,12 @@ const projects = [
     },
     {
         id: "music-0.6",
-        title: "Vol 0.6 — Electronic Mix",
+        title: "Vol 0.6 — Afro House Mix",
         category: "music",
-        year: 2025,
+        year: 2024,
         thumbnail: "",
         emoji: "🎧",
-        description: "90-minute mix blending house, techno, and ambient electronica. Recorded live.",
+        description: "An Afro house set recorded in 2024, from Iorona through Yara.",
         embed:`<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1855351530&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/darryl_21" title="Cosmos_" target="_blank" style="color: #cccccc; text-decoration: none;">Cosmos_</a> · <a href="https://soundcloud.com/darryl_21/mix-vol-06" title="Mix v0.6" target="_blank" style="color: #cccccc; text-decoration: none;">Mix v0.6</a></div>`,
         links: [
             { text: "Listen on SoundCloud", url: "https://soundcloud.com/darryl_21/mix-vol-06", icon: "fa-headphones", style: "solid" }
@@ -168,162 +144,94 @@ const projects = [
     },
     // ── 2024 ──────────────────────────────────────────────
     {
-        id: "game-design-1",
-        title: "Example Game Design Project",
-        category: "game-design",
-        year: 2024,
-        thumbnail: "",        // put "assets/images/your-image.png" here
-        emoji: "🎮",
-        description: "A short description of your game design project — what it is, what you designed, and what makes it interesting.",
-        links: [
-            { text: "View Slides", url: "#", icon: "fa-file-powerpoint", style: "solid" },
-            { text: "Play Demo",   url: "#", icon: "fa-gamepad",         style: "ghost" }
-        ]
-    },
-    {
         id: "game-design-puzzle-prototype",
-        title: "School Project — Puzzle Game Prototype",
+        title: "Puzzle Game Prototype",
         category: "game-design",
         year: 2024,
         thumbnail: "",
         emoji: "🧩",
-        description: "Coming soon.",
-        links: [
-            { text: "View Design Doc", url: "#", icon: "fa-file-alt", style: "solid" },
-            { text: "Play Prototype",  url: "#", icon: "fa-gamepad",  style: "ghost" }
-        ]
+        description: "NYU Games for Learning prototype exploring puzzle structure, spatial reasoning, and player onboarding.",
+        links: []
     },
     {
         id: "game-design-reading-prototype",
-        title: "School Project — Reading Game Prototype",
+        title: "Reading Game Prototype",
         category: "game-design",
         year: 2024,
         thumbnail: "",
         emoji: "📚",
-        description: "Coming soon.",
-        links: [
-            { text: "View Design Doc", url: "#", icon: "fa-file-alt", style: "solid" },
-            { text: "Play Prototype",  url: "#", icon: "fa-gamepad",  style: "ghost" }
-        ]
+        description: "A learning-game prototype focused on reading engagement, feedback, and tutorialization.",
+        links: []
     },
     {
         id: "rework-ffxiv",
-        title: "Game Design Rework — Final Fantasy XIV",
+        title: "Design Rework — Final Fantasy XIV",
         category: "game-design",
         year: 2024,
         thumbnail: "",
         emoji: "⚔️",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        description: "A systems rework looking at combat identity, job onboarding, and how FFXIV teaches its own complexity.",
+        links: []
     },
     {
         id: "rework-super-mario-maker",
-        title: "Game Design Rework — Super Mario Maker",
+        title: "Design Rework — Super Mario Maker",
         category: "game-design",
         year: 2024,
         thumbnail: "",
         emoji: "🍄",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
-    },
-    {
-        id: "game-design-2",
-        title: "Game Prototype — Puzzle Mechanic",
-        category: "game-design",
-        year: 2024,
-        thumbnail: "",
-        emoji: "🧩",
-        description: "A playable prototype exploring spatial reasoning and environmental storytelling through minimalist puzzle design.",
-        links: [
-            { text: "Play Prototype", url: "#", icon: "fa-play", style: "solid" }
-        ]
+        description: "A design rework on how Mario Maker teaches creation, playtesting, and the gap between maker tools and player experience.",
+        links: []
     },
     {
         id: "analysis-turing-test",
-        title: "Design Analysis - The Turing Test",
+        title: "Design Analysis — The Turing Test",
         category: "analysis",
         year: 2024,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "🔋",
+        description: "Energy-transfer puzzles, narrative framing, and how The Turing Test uses a single mechanic to pace discovery.",
+        links: []
     },
     {
         id: "analysis-ff7-remake",
-        title: "Design Analysis - Final Fantasy VII Remake",
+        title: "Design Analysis — Final Fantasy VII Remake",
         category: "analysis",
         year: 2024,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "🌟",
+        description: "Real-time combat versus classic structure — character banter, pacing, and how Remake teaches a new battle language.",
+        links: []
     },
     {
         id: "analysis-pokemon-arceus",
-        title: "Design Analysis - Pokémon Legends: Arceus",
+        title: "Design Analysis — Pokémon Legends: Arceus",
         category: "analysis",
         year: 2024,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "🪙",
+        description: "Catching as the core loop, research tasks, and how Arceus rebuilds Pokémon around exploration instead of gyms.",
+        links: []
     },
     {
         id: "analysis-control",
-        title: "Design Analysis - Control",
+        title: "Design Analysis — Control",
         category: "analysis",
         year: 2024,
         thumbnail: "",
-        emoji: "📖",
-        description: "Coming soon.",
-        links: [
-            { text: "Read PDF", url: "#", icon: "fa-file-pdf", style: "solid" }
-        ]
+        emoji: "🏢",
+        description: "Ability growth and the Oldest House as teacher — how architecture, not UI, onboards Control's power fantasy.",
+        links: []
     },
-    {
-        id: "analysis-2",
-        title: "Design Proposal: Adaptive Difficulty System",
-        category: "analysis",
-        year: 2024,
-        thumbnail: "",
-        emoji: "📊",
-        description: "A design proposal outlining a data-driven adaptive difficulty framework for mid-core mobile games.",
-        links: [
-            { text: "View PDF", url: "assets/pdfs/proposal.pdf", icon: "fa-file-pdf", style: "solid" }
-        ]
-    },
-    // ── 2023 ──────────────────────────────────────────────
-    {
-        id: "academic-1",
-        title: "Academic Paper: Player Agency vs. Authorial Intent",
-        category: "academic",
-        year: 2023,
-        thumbnail: "",
-        emoji: "📄",
-        description: "Research paper exploring the tension between player freedom and designed experiences in game design education.",
-        links: [
-            { text: "Download PDF", url: "assets/pdfs/paper.pdf", icon: "fa-download", style: "solid" }
-        ]
-    },
-    // ── 2020 ──────────────────────────────────────────────
+    // ── 2021 ──────────────────────────────────────────────
     {
         id: "music-0.2",
-        title: "Vol 0.2 — Electronic Mix",
+        title: "Vol 0.2 — Chillhop Mix",
         category: "music",
-        year: 2020,
+        year: 2021,
         thumbnail: "",
         emoji: "🎧",
-        description: "90-minute mix blending house, techno, and ambient electronica. Recorded live.",
+        description: "An early chillhop set — Vanilla, jinsang, goosetaf, Blue Wednesday, and adjacent lo-fi.",
         embed:`<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1003790935&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/darryl_21" title="Cosmos_" target="_blank" style="color: #cccccc; text-decoration: none;">Cosmos_</a> · <a href="https://soundcloud.com/darryl_21/mix-v02" title="Mix v0.2" target="_blank" style="color: #cccccc; text-decoration: none;">Mix v0.2</a></div>`,
         links: [
             { text: "Listen on SoundCloud", url: "https://soundcloud.com/darryl_21/mix-v02", icon: "fa-headphones", style: "solid" }
@@ -337,7 +245,7 @@ const projects = [
         year: 2018,
         thumbnail: "",
         emoji: "🔫",
-        description: "Coming soon.",
+        description: "An early Unity HTML5 shooter prototype — still playable in the browser.",
         itchEmbed: "https://itch.io/embed-upload/1044737?color=333333",
         links: [
             { text: "Play on Itch.io", url: "https://cosmos-soul.itch.io/shooter-protoype", icon: "fa-gamepad", style: "solid" }
@@ -455,12 +363,24 @@ const CATEGORY_EMOJI = {
     "other":       "⚡"
 };
 
+function isLiveUrl(url) {
+    return Boolean(url) && url !== "#";
+}
+
+function visibleProjects() {
+    return projects.filter(p => p.published !== false);
+}
+
+function liveProjectLinks(p) {
+    return (p.links || []).filter(l => isLiveUrl(l.url));
+}
+
 function renderProjects() {
     const grid = document.getElementById("projects-grid");
     if (!grid) return;
     grid.innerHTML = "";
 
-    projects.forEach(p => {
+    visibleProjects().forEach(p => {
         const card = document.createElement("article");
         card.className = "project-card fade-in";
         card.dataset.category = p.category;
@@ -471,7 +391,8 @@ function renderProjects() {
                 ? `<div class="project-embed">${p.embed}</div>`
                 : `<div class="project-thumb-placeholder">${p.emoji || CATEGORY_EMOJI[p.category] || "⚡"}</div>`;
 
-        const pdfLink = (p.links || []).find(l => l.url.endsWith(".pdf") && l.url !== "#");
+        const liveLinks = liveProjectLinks(p);
+        const pdfLink = liveLinks.find(l => l.url.endsWith(".pdf"));
         const previewBtn = pdfLink
             ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
                    <i class="fas fa-eye"></i> Preview
@@ -484,7 +405,7 @@ function renderProjects() {
                </button>`
             : "";
 
-        const linksHtml = (p.links || []).map(l =>
+        const linksHtml = liveLinks.map(l =>
             `<a href="${l.url}" class="project-link ${l.style}" ${(l.url.startsWith("http") || l.url.endsWith(".pdf")) ? 'target="_blank" rel="noopener"' : ''}>
                 <i class="fas ${l.icon}"></i> ${l.text}
             </a>`
@@ -572,8 +493,14 @@ function filterProjects(filter) {
 }
 
 function initProjectFilters() {
+    const publishedCats = new Set(visibleProjects().map(p => p.category));
     const tabs = document.querySelectorAll(".filter-tab");
     tabs.forEach(tab => {
+        const filter = tab.dataset.filter;
+        if (filter !== "all" && !publishedCats.has(filter)) {
+            tab.hidden = true;
+            return;
+        }
         tab.addEventListener("click", () => {
             tabs.forEach(t => t.classList.remove("active"));
             tab.classList.add("active");
@@ -626,7 +553,8 @@ function initProjectModal() {
         descEl.textContent  = p.description;
         summaryEl.textContent = p.summary || "";
 
-        const pdfLink = (p.links || []).find(l => l.url.endsWith(".pdf") && l.url !== "#");
+        const liveLinks = liveProjectLinks(p);
+        const pdfLink = liveLinks.find(l => l.url.endsWith(".pdf"));
         const previewBtn = pdfLink
             ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
                    <i class="fas fa-eye"></i> Preview
@@ -637,7 +565,7 @@ function initProjectModal() {
                    <i class="fas fa-play"></i> Play in Browser
                </button>`
             : "";
-        linksEl.innerHTML = (p.links || []).map(l =>
+        linksEl.innerHTML = liveLinks.map(l =>
             `<a href="${l.url}" class="project-link ${l.style}" ${(l.url.startsWith("http") || l.url.endsWith(".pdf")) ? 'target="_blank" rel="noopener"' : ''}>
                 <i class="fas ${l.icon}"></i> ${l.text}
             </a>`
