@@ -25,13 +25,13 @@ const projects = [
     // ── 2025 ──────────────────────────────────────────────
     {
         id: "game-design-moon-phases-vr",
-        title: "Moon Phase Practice — VR",
+        title: "Alien Farm",
         category: "game-design",
         year: 2025,
         thumbnail: "",
         emoji: "🌕",
-        description: "A VR learning-game design for practicing moon phases — interaction, pedagogy, and session flow.",
-        summary: "Design deck covering the VR practice loop, teaching goals, and session flow. Expand this card to page through the slides here, or open them in Canva.",
+        description: "A VR learning-game design for practicing moon phases for Grades 5~6 based on Mislevy's Evidence-Centered Design for assessment, design, pedagogy, and session flow.",
+        summary: "Design and storyboard deck covering the theoretical framework, the core game loop, and 2 example levels. Expand this card to page through the slides here, or open them in Canva.",
         slidesEmbed: "https://www.canva.com/design/DAG2Xss5gew/YvDS3W553V2I-L9cXM9pTQ/view?embed",
         links: [
             { text: "Open in Canva", url: "https://www.canva.com/design/DAG2Xss5gew/YvDS3W553V2I-L9cXM9pTQ/view", icon: "fa-up-right-from-square", style: "ghost" }
