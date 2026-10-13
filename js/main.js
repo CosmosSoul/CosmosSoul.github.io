@@ -24,6 +24,19 @@ const projects = [
     },
     // ── 2025 ──────────────────────────────────────────────
     {
+        id: "game-design-moon-phases-vr",
+        title: "Moon Phase Practice — VR",
+        category: "game-design",
+        year: 2025,
+        thumbnail: "",
+        emoji: "🌕",
+        description: "A VR learning-game design for practicing moon phases — interaction, pedagogy, and session flow.",
+        summary: "Design deck in Canva. Paste the share link into the links array below when you are ready to publish it.",
+        links: [
+            // { text: "View Slides", url: "PASTE_CANVA_SHARE_URL_HERE", icon: "fa-file-powerpoint", style: "solid" }
+        ]
+    },
+    {
         id: "analysis-shinobi",
         title: "Design Analysis — Shinobi: Art of Vengeance",
         category: "analysis",
