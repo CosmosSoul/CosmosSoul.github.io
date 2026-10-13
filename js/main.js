@@ -179,13 +179,17 @@ const projects = [
     },
     {
         id: "rework-ffxiv",
-        title: "Design Rework — Final Fantasy XIV",
+        title: "FFXIV Design Exercises",
         category: "game-design",
         year: 2024,
         thumbnail: "",
         emoji: "⚔️",
-        description: "A systems rework looking at combat identity, job onboarding, and how FFXIV teaches its own complexity.",
-        links: []
+        description: "Two content-designer exercises for Final Fantasy XIV: a dungeon-boss plan (色飛ぶ) and a job-growth pitch (Aether Break / Aether Chain).",
+        summary: "Same franchise, two lenses — encounter teaching in a duty, then a resource layer for identity and progression. Expand the card to preview either PDF, or open them in a new tab.",
+        links: [
+            { text: "Boss design (PDF)", url: "assets/pdfs/FFXIV-Boss-Design.pdf", icon: "fa-file-pdf", style: "solid", preview: "Preview boss plan" },
+            { text: "Aether Break (PDF)", url: "assets/pdfs/FFXIV-Aether-Break.pdf", icon: "fa-file-pdf", style: "ghost", preview: "Preview Aether Break" }
+        ]
     },
     {
         id: "rework-super-mario-maker",
@@ -194,8 +198,11 @@ const projects = [
         year: 2024,
         thumbnail: "",
         emoji: "🍄",
-        description: "A design rework on how Mario Maker teaches creation, playtesting, and the gap between maker tools and player experience.",
-        links: []
+        description: "A Super Mario Maker gameplay-redesign proposal: how maker tools teach creation, and where playtest feedback should close the gap.",
+        summary: "Written as a Nintendo application packet. Expand the card to preview the PDF, or open it in a new tab.",
+        links: [
+            { text: "Open PDF", url: "assets/pdfs/Mario-Maker-Gameplay-Redesign.pdf", icon: "fa-file-pdf", style: "solid" }
+        ]
     },
     {
         id: "analysis-turing-test",
@@ -389,6 +396,17 @@ function liveProjectLinks(p) {
     return (p.links || []).filter(l => isLiveUrl(l.url));
 }
 
+function pdfPreviewButtons(p, liveLinks) {
+    const pdfs = liveLinks.filter(l => l.url.endsWith(".pdf"));
+    return pdfs.map(l => {
+        const label = pdfs.length > 1 ? (l.preview || `Preview ${l.text}`) : "Preview";
+        const title = pdfs.length > 1 ? `${p.title} — ${l.text.replace(/\s*\(PDF\)\s*$/i, "")}` : p.title;
+        return `<button class="project-link ghost project-preview-btn" data-embed="${l.url}" data-title="${title}" data-type="pdf">
+                   <i class="fas fa-eye"></i> ${label}
+               </button>`;
+    }).join("");
+}
+
 function loadCardSlides(card) {
     const holder = card.querySelector(".project-slides");
     if (!holder || holder.querySelector("iframe")) return;
@@ -420,15 +438,10 @@ function renderProjects() {
                 : `<div class="project-thumb-placeholder">${p.emoji || CATEGORY_EMOJI[p.category] || "⚡"}</div>`;
 
         const liveLinks = liveProjectLinks(p);
-        const pdfLink = liveLinks.find(l => l.url.endsWith(".pdf"));
-        const previewBtn = pdfLink
-            ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
-                   <i class="fas fa-eye"></i> Preview
-               </button>`
-            : "";
+        const previewBtn = pdfPreviewButtons(p, liveLinks);
 
-        const playBtn = p.itchEmbed
-            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed}" data-title="${p.title}" data-type="game">
+        const playBtn = (p.itchEmbed || p.gameEmbed)
+            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed || p.gameEmbed}" data-title="${p.title}" data-type="game">
                    <i class="fas fa-play"></i> Play in Browser
                </button>`
             : "";
@@ -597,14 +610,9 @@ function initProjectModal() {
         summaryEl.textContent = p.summary || "";
 
         const liveLinks = liveProjectLinks(p);
-        const pdfLink = liveLinks.find(l => l.url.endsWith(".pdf"));
-        const previewBtn = pdfLink
-            ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
-                   <i class="fas fa-eye"></i> Preview
-               </button>`
-            : "";
-        const playBtn = p.itchEmbed
-            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed}" data-title="${p.title}" data-type="game">
+        const previewBtn = pdfPreviewButtons(p, liveLinks);
+        const playBtn = (p.itchEmbed || p.gameEmbed)
+            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed || p.gameEmbed}" data-title="${p.title}" data-type="game">
                    <i class="fas fa-play"></i> Play in Browser
                </button>`
             : "";
