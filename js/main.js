@@ -31,9 +31,10 @@ const projects = [
         thumbnail: "",
         emoji: "🌕",
         description: "A VR learning-game design for practicing moon phases — interaction, pedagogy, and session flow.",
-        summary: "Design deck in Canva. Paste the share link into the links array below when you are ready to publish it.",
+        summary: "Design deck covering the VR practice loop, teaching goals, and session flow. Expand this card to page through the slides here, or open them in Canva.",
+        slidesEmbed: "https://www.canva.com/design/DAG2Xss5gew/YvDS3W553V2I-L9cXM9pTQ/view?embed",
         links: [
-            // { text: "View Slides", url: "PASTE_CANVA_SHARE_URL_HERE", icon: "fa-file-powerpoint", style: "solid" }
+            { text: "Open in Canva", url: "https://www.canva.com/design/DAG2Xss5gew/YvDS3W553V2I-L9cXM9pTQ/view", icon: "fa-up-right-from-square", style: "ghost" }
         ]
     },
     {
@@ -388,6 +389,20 @@ function liveProjectLinks(p) {
     return (p.links || []).filter(l => isLiveUrl(l.url));
 }
 
+function loadCardSlides(card) {
+    const holder = card.querySelector(".project-slides");
+    if (!holder || holder.querySelector("iframe")) return;
+    const url = holder.dataset.embed;
+    const title = holder.dataset.title || "Slides";
+    if (!url) return;
+    holder.innerHTML = `<iframe src="${url}" title="${title} slides" loading="lazy" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>`;
+}
+
+function unloadCardSlides(card) {
+    const holder = card.querySelector(".project-slides");
+    if (holder) holder.innerHTML = "";
+}
+
 function renderProjects() {
     const grid = document.getElementById("projects-grid");
     if (!grid) return;
@@ -418,11 +433,21 @@ function renderProjects() {
                </button>`
             : "";
 
+        const slidesBtn = p.slidesEmbed
+            ? `<button class="project-link ghost project-preview-btn" data-embed="${p.slidesEmbed}" data-title="${p.title}" data-type="slides">
+                   <i class="fas fa-expand"></i> Larger view
+               </button>`
+            : "";
+
         const linksHtml = liveLinks.map(l =>
             `<a href="${l.url}" class="project-link ${l.style}" ${(l.url.startsWith("http") || l.url.endsWith(".pdf")) ? 'target="_blank" rel="noopener"' : ''}>
                 <i class="fas ${l.icon}"></i> ${l.text}
             </a>`
-        ).join("") + previewBtn + playBtn;
+        ).join("") + previewBtn + playBtn + slidesBtn;
+
+        const slidesHolder = p.slidesEmbed
+            ? `<div class="project-slides" data-embed="${p.slidesEmbed}" data-title="${p.title}"></div>`
+            : "";
 
         card.innerHTML = `
             ${thumb}
@@ -431,6 +456,7 @@ function renderProjects() {
                 <h3 class="project-title">${p.title}</h3>
                 <p class="project-desc">${p.description}</p>
                 ${p.summary ? `<p class="project-summary">${p.summary}</p>` : ""}
+                ${slidesHolder}
                 <div class="project-links" style="display: none;">${linksHtml}</div>
                 <span class="project-collapse-hint">Click to collapse</span>
             </div>`;
@@ -446,11 +472,13 @@ function renderProjects() {
             }
 
             if (e.target.closest(".project-link")) return;
+            if (e.target.closest(".project-slides")) return;
 
             const isExpanded = card.classList.contains("expanded");
 
             // Collapse any other expanded card first
             document.querySelectorAll(".project-card.expanded").forEach(c => {
+                unloadCardSlides(c);
                 c.classList.remove("expanded");
                 c.style.gridColumn = "";
                 c.style.gridRow    = "";
@@ -482,6 +510,7 @@ function renderProjects() {
 
                 card.classList.add("expanded");
                 card.querySelector(".project-links").style.display = "flex";
+                loadCardSlides(card);
                 card.scrollIntoView({ behavior: "smooth", block: "nearest" });
             }
         });
@@ -493,6 +522,7 @@ function renderProjects() {
 function filterProjects(filter) {
     // Collapse any expanded card before filtering
     document.querySelectorAll(".project-card.expanded").forEach(c => {
+        unloadCardSlides(c);
         c.classList.remove("expanded");
         c.style.gridColumn = "";
         c.style.gridRow    = "";
@@ -578,11 +608,16 @@ function initProjectModal() {
                    <i class="fas fa-play"></i> Play in Browser
                </button>`
             : "";
+        const slidesBtn = p.slidesEmbed
+            ? `<button class="project-link ghost project-preview-btn" data-embed="${p.slidesEmbed}" data-title="${p.title}" data-type="slides">
+                   <i class="fas fa-expand"></i> Larger view
+               </button>`
+            : "";
         linksEl.innerHTML = liveLinks.map(l =>
             `<a href="${l.url}" class="project-link ${l.style}" ${(l.url.startsWith("http") || l.url.endsWith(".pdf")) ? 'target="_blank" rel="noopener"' : ''}>
                 <i class="fas ${l.icon}"></i> ${l.text}
             </a>`
-        ).join("") + previewBtn + playBtn;
+        ).join("") + previewBtn + playBtn + slidesBtn;
 
         // Wire up preview/play buttons inside the detail modal
         linksEl.querySelectorAll(".project-preview-btn").forEach(btn => {
