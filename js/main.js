@@ -58,6 +58,7 @@ const projects = [
         thumbnail: "",
         emoji: "📡",
         description: "Extraction tension, squad communication, and how PvPvE risk shapes every raid decision.",
+        comingSoon: true,
         links: []
     },
     {
@@ -107,8 +108,11 @@ const projects = [
         year: 2025,
         thumbnail: "",
         emoji: "🐸",
-        description: "Secret density and environmental teaching — how Animal Well onboards through space instead of text.",
-        links: []
+        description: "How Animal Well teaches its systems through toys, managed threats, and dense playgrounds — without a conventional tutorial or traditional combat.",
+        summary: "A case study from GameXP play notes: observation and experimentation lead progression. Toys have physical behaviors, threats are often navigated rather than cleared, and the takeaway is how much feedback discovery still needs.",
+        links: [
+            { text: "Read PDF", url: "assets/pdfs/GameXP.AnimalWell.pdf", icon: "fa-file-pdf", style: "solid" }
+        ]
     },
     {
         id: "analysis-chrono-trigger",
@@ -118,6 +122,7 @@ const projects = [
         thumbnail: "",
         emoji: "⏳",
         description: "Double techs, encounter rhythm, and how combat supports a time-travel narrative.",
+        comingSoon: true,
         links: []
     },
     {
@@ -212,6 +217,7 @@ const projects = [
         thumbnail: "",
         emoji: "🔋",
         description: "Energy-transfer puzzles, narrative framing, and how The Turing Test uses a single mechanic to pace discovery.",
+        comingSoon: true,
         links: []
     },
     {
@@ -222,6 +228,7 @@ const projects = [
         thumbnail: "",
         emoji: "🌟",
         description: "Real-time combat versus classic structure — character banter, pacing, and how Remake teaches a new battle language.",
+        comingSoon: true,
         links: []
     },
     {
@@ -232,6 +239,7 @@ const projects = [
         thumbnail: "",
         emoji: "🪙",
         description: "Catching as the core loop, research tasks, and how Arceus rebuilds Pokémon around exploration instead of gyms.",
+        comingSoon: true,
         links: []
     },
     {
@@ -462,8 +470,10 @@ function renderProjects() {
             ? `<div class="project-slides" data-embed="${p.slidesEmbed}" data-title="${p.title}"></div>`
             : "";
 
+        const soonBadge = p.comingSoon ? `<span class="project-soon">Coming soon</span>` : "";
+
         card.innerHTML = `
-            ${thumb}
+            <div class="project-media">${thumb}${soonBadge}</div>
             <div class="project-body">
                 <p class="project-category">${p.category.replace("-", " ")} &middot; ${p.year}</p>
                 <h3 class="project-title">${p.title}</h3>
