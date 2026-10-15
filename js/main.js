@@ -178,6 +178,7 @@ const projects = [
         thumbnail: "",
         emoji: "🧩",
         description: "NYU Games for Learning prototype exploring puzzle structure, spatial reasoning, and player onboarding.",
+        comingSoon: true,
         links: []
     },
     {
@@ -188,6 +189,7 @@ const projects = [
         thumbnail: "",
         emoji: "📚",
         description: "A learning-game prototype focused on reading engagement, feedback, and tutorialization.",
+        comingSoon: true,
         links: []
     },
     {
@@ -198,7 +200,11 @@ const projects = [
         thumbnail: "",
         emoji: "⚔️",
         description: "A systems rework looking at combat identity, job onboarding, and how FFXIV teaches its own complexity.",
-        links: []
+        summary: "Two content-designer exercises: a dungeon-boss plan and an Aether Break / Aether Chain growth pitch. Expand the card to preview either PDF.",
+        links: [
+            { text: "Boss design (PDF)", url: "assets/pdfs/FFXIV-Boss-Design.pdf", icon: "fa-file-pdf", style: "solid", preview: "Preview boss plan" },
+            { text: "Aether Break (PDF)", url: "assets/pdfs/FFXIV-Aether-Break.pdf", icon: "fa-file-pdf", style: "ghost", preview: "Preview Aether Break" }
+        ]
     },
     {
         id: "rework-super-mario-maker",
@@ -208,7 +214,10 @@ const projects = [
         thumbnail: "",
         emoji: "🍄",
         description: "A design rework that aims at the gap between how Mario Maker facilitates creation within levels instead of only outside of levels.",
-        links: []
+        summary: "Expand the card to preview the PDF, or open it in a new tab.",
+        links: [
+            { text: "Open PDF", url: "assets/pdfs/Mario-Maker-Gameplay-Redesign.pdf", icon: "fa-file-pdf", style: "solid" }
+        ]
     },
     {
         id: "analysis-turing-test",
@@ -405,6 +414,17 @@ function liveProjectLinks(p) {
     return (p.links || []).filter(l => isLiveUrl(l.url));
 }
 
+function pdfPreviewButtons(p, liveLinks) {
+    const pdfs = liveLinks.filter(l => l.url.endsWith(".pdf"));
+    return pdfs.map(l => {
+        const label = pdfs.length > 1 ? (l.preview || `Preview ${l.text}`) : "Preview";
+        const title = pdfs.length > 1 ? `${p.title} — ${l.text.replace(/\s*\(PDF\)\s*$/i, "")}` : p.title;
+        return `<button class="project-link ghost project-preview-btn" data-embed="${l.url}" data-title="${title}" data-type="pdf">
+                   <i class="fas fa-eye"></i> ${label}
+               </button>`;
+    }).join("");
+}
+
 function loadCardSlides(card) {
     const holder = card.querySelector(".project-slides");
     if (!holder || holder.querySelector("iframe")) return;
@@ -436,12 +456,7 @@ function renderProjects() {
                 : `<div class="project-thumb-placeholder">${p.emoji || CATEGORY_EMOJI[p.category] || "⚡"}</div>`;
 
         const liveLinks = liveProjectLinks(p);
-        const pdfLink = liveLinks.find(l => l.url.endsWith(".pdf"));
-        const previewBtn = pdfLink
-            ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
-                   <i class="fas fa-eye"></i> Preview
-               </button>`
-            : "";
+        const previewBtn = pdfPreviewButtons(p, liveLinks);
 
         const playBtn = p.itchEmbed
             ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed}" data-title="${p.title}" data-type="game">
@@ -615,12 +630,7 @@ function initProjectModal() {
         summaryEl.textContent = p.summary || "";
 
         const liveLinks = liveProjectLinks(p);
-        const pdfLink = liveLinks.find(l => l.url.endsWith(".pdf"));
-        const previewBtn = pdfLink
-            ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
-                   <i class="fas fa-eye"></i> Preview
-               </button>`
-            : "";
+        const previewBtn = pdfPreviewButtons(p, liveLinks);
         const playBtn = p.itchEmbed
             ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed}" data-title="${p.title}" data-type="game">
                    <i class="fas fa-play"></i> Play in Browser
