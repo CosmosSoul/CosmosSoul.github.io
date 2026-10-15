@@ -29,7 +29,7 @@ const projects = [
         category: "game-design",
         year: 2025,
         thumbnail: "",
-        emoji: "🌕",
+        emoji: "🌔",
         description: "A VR learning-game design for practicing moon phases for Grades 5~6 based on Mislevy's Evidence-Centered Design for assessment, design, pedagogy, and session flow.",
         summary: "Design and storyboard deck covering the theoretical framework, the core game loop, and 2 example levels. Expand this card to page through the slides here, or open them in Canva.",
         slidesEmbed: "https://www.canva.com/design/DAG2Xss5gew/YvDS3W553V2I-L9cXM9pTQ/view?embed",
@@ -88,7 +88,7 @@ const projects = [
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "🏰",
+        emoji: "🧟",
         description: "Resource pressure, first-person survival horror, and how Village moves between exploration and set-piece combat.",
         links: []
     },
@@ -139,7 +139,7 @@ const projects = [
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "🐺",
+        emoji: "🌚",
         description: "Notes on upcoming expansion systems — onboarding, activity structure, and how Midnight frames new player goals.",
         links: []
     },
