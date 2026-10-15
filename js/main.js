@@ -25,7 +25,7 @@ const projects = [
     // ── 2025 ──────────────────────────────────────────────
     {
         id: "game-design-moon-phases-vr",
-        title: "Alien Farm",
+        title: "Alien Farm VR",
         category: "game-design",
         year: 2025,
         thumbnail: "",
@@ -38,12 +38,23 @@ const projects = [
         ]
     },
     {
+        id: "game-design-phonics-capstone",
+        title: "Bubble Letters",
+        category: "game-design",
+        year: 2025,
+        thumbnail: "",
+        emoji: "🔤",
+        description: "A phonics learning game grounded in Science of Reading research, designed and storyboarded for early literacy practice that also served as my Capstone Thesis Design Project.",
+        comingSoon: true,
+        links: []
+    },
+    {
         id: "analysis-shinobi",
         title: "Design Analysis — Shinobi: Art of Vengeance",
         category: "analysis",
         year: 2025,
         thumbnail: "",
-        emoji: "🗡️",
+        emoji: "🥷🏾",
         description: "When combat fights against combatants — a close read of Shinobi: Art of Vengeance's encounter design.",
         summary: "A GameXP-style write-up on how combat systems, enemy roles, and player expression support — or undercut — each other in Treasure's revival of Shinobi.",
         links: [
@@ -108,11 +119,8 @@ const projects = [
         year: 2025,
         thumbnail: "",
         emoji: "🐸",
-        description: "How Animal Well teaches its systems through toys, managed threats, and dense playgrounds — without a conventional tutorial or traditional combat.",
-        summary: "A case study from GameXP play notes: observation and experimentation lead progression. Toys have physical behaviors, threats are often navigated rather than cleared, and the takeaway is how much feedback discovery still needs.",
-        links: [
-            { text: "Read PDF", url: "assets/pdfs/GameXP.AnimalWell.pdf", icon: "fa-file-pdf", style: "solid" }
-        ]
+        description: "Secret density and environmental teaching — how Animal Well onboards through space instead of text.",
+        links: []
     },
     {
         id: "analysis-chrono-trigger",
@@ -184,17 +192,13 @@ const projects = [
     },
     {
         id: "rework-ffxiv",
-        title: "FFXIV Design Exercises",
+        title: "Design Rework — Final Fantasy XIV",
         category: "game-design",
         year: 2024,
         thumbnail: "",
         emoji: "⚔️",
-        description: "Two content-designer exercises for Final Fantasy XIV: a dungeon-boss plan (色飛ぶ) and a job-growth pitch (Aether Break / Aether Chain).",
-        summary: "Same franchise, two lenses — encounter teaching in a duty, then a resource layer for identity and progression. Expand the card to preview either PDF, or open them in a new tab.",
-        links: [
-            { text: "Boss design (PDF)", url: "assets/pdfs/FFXIV-Boss-Design.pdf", icon: "fa-file-pdf", style: "solid", preview: "Preview boss plan" },
-            { text: "Aether Break (PDF)", url: "assets/pdfs/FFXIV-Aether-Break.pdf", icon: "fa-file-pdf", style: "ghost", preview: "Preview Aether Break" }
-        ]
+        description: "A systems rework looking at combat identity, job onboarding, and how FFXIV teaches its own complexity.",
+        links: []
     },
     {
         id: "rework-super-mario-maker",
@@ -203,11 +207,8 @@ const projects = [
         year: 2024,
         thumbnail: "",
         emoji: "🍄",
-        description: "A Super Mario Maker gameplay-redesign proposal: how maker tools teach creation, and where playtest feedback should close the gap.",
-        summary: "Written as a Nintendo application packet. Expand the card to preview the PDF, or open it in a new tab.",
-        links: [
-            { text: "Open PDF", url: "assets/pdfs/Mario-Maker-Gameplay-Redesign.pdf", icon: "fa-file-pdf", style: "solid" }
-        ]
+        description: "A design rework that aims at the gap between how Mario Maker facilitates creation within levels instead of only outside of levels.",
+        links: []
     },
     {
         id: "analysis-turing-test",
@@ -404,17 +405,6 @@ function liveProjectLinks(p) {
     return (p.links || []).filter(l => isLiveUrl(l.url));
 }
 
-function pdfPreviewButtons(p, liveLinks) {
-    const pdfs = liveLinks.filter(l => l.url.endsWith(".pdf"));
-    return pdfs.map(l => {
-        const label = pdfs.length > 1 ? (l.preview || `Preview ${l.text}`) : "Preview";
-        const title = pdfs.length > 1 ? `${p.title} — ${l.text.replace(/\s*\(PDF\)\s*$/i, "")}` : p.title;
-        return `<button class="project-link ghost project-preview-btn" data-embed="${l.url}" data-title="${title}" data-type="pdf">
-                   <i class="fas fa-eye"></i> ${label}
-               </button>`;
-    }).join("");
-}
-
 function loadCardSlides(card) {
     const holder = card.querySelector(".project-slides");
     if (!holder || holder.querySelector("iframe")) return;
@@ -446,10 +436,15 @@ function renderProjects() {
                 : `<div class="project-thumb-placeholder">${p.emoji || CATEGORY_EMOJI[p.category] || "⚡"}</div>`;
 
         const liveLinks = liveProjectLinks(p);
-        const previewBtn = pdfPreviewButtons(p, liveLinks);
+        const pdfLink = liveLinks.find(l => l.url.endsWith(".pdf"));
+        const previewBtn = pdfLink
+            ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
+                   <i class="fas fa-eye"></i> Preview
+               </button>`
+            : "";
 
-        const playBtn = (p.itchEmbed || p.gameEmbed)
-            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed || p.gameEmbed}" data-title="${p.title}" data-type="game">
+        const playBtn = p.itchEmbed
+            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed}" data-title="${p.title}" data-type="game">
                    <i class="fas fa-play"></i> Play in Browser
                </button>`
             : "";
@@ -620,9 +615,14 @@ function initProjectModal() {
         summaryEl.textContent = p.summary || "";
 
         const liveLinks = liveProjectLinks(p);
-        const previewBtn = pdfPreviewButtons(p, liveLinks);
-        const playBtn = (p.itchEmbed || p.gameEmbed)
-            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed || p.gameEmbed}" data-title="${p.title}" data-type="game">
+        const pdfLink = liveLinks.find(l => l.url.endsWith(".pdf"));
+        const previewBtn = pdfLink
+            ? `<button class="project-link ghost project-preview-btn" data-embed="${pdfLink.url}" data-title="${p.title}" data-type="pdf">
+                   <i class="fas fa-eye"></i> Preview
+               </button>`
+            : "";
+        const playBtn = p.itchEmbed
+            ? `<button class="project-link solid project-preview-btn" data-embed="${p.itchEmbed}" data-title="${p.title}" data-type="game">
                    <i class="fas fa-play"></i> Play in Browser
                </button>`
             : "";
