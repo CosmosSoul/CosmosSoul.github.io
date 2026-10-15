@@ -706,6 +706,12 @@ function initPdfModal() {
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && !modal.hidden) closeModal();
     });
+
+    document.querySelectorAll(".hero-btns .project-preview-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            window.openEmbedModal(btn.dataset.embed, btn.dataset.title, btn.dataset.type);
+        });
+    });
 }
 
 // ── FOOTER YEAR ───────────────────────────────────────────
