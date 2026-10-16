@@ -259,8 +259,8 @@ const projects = [
         year: 2024,
         thumbnail: "",
         emoji: "🏢",
-        description: "Ability growth and the Oldest House as teacher — how architecture, not UI, onboards Control's power fantasy.",
-        summary: "A GameXP case study on how Control teaches through shifting architecture, then undercuts that teaching with late-game lore, upgrades, and errands. Expand the card to preview the PDF.",
+        description: "How does the Oldest House serve as both the main character and The Mentor for the player?",
+        summary: "A GameXP case study on how architecture, not UI, onboards Control's sci-fi fantasy via environment, shifting architecture and later unfortunately undercuts some of that teaching with superfluous late-game lore, upgrades, and errands.",
         links: [
             { text: "Read PDF", url: "assets/pdfs/GameXP.Control.UPLOAD.pdf", icon: "fa-file-pdf", style: "solid" }
         ]
