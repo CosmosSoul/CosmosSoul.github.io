@@ -6,6 +6,8 @@
 // Categories: game-design, analysis, music, academic, other
 // Set published: false to keep a card in this file without showing it.
 // Leave links empty until a real file or URL exists — "#" buttons are not rendered.
+// description: collapsed card blurb
+// role + responsibilities: shown when the card is expanded
 const projects = [
     // ── 2026 ──────────────────────────────────────────────
     {
@@ -16,6 +18,13 @@ const projects = [
         thumbnail: "",
         emoji: "🌱",
         description: "In progress with Joy Education: working with students, teachers, and caregivers to build research-informed, game-based literacy games — learning mechanics kids can grow with while they play.",
+        role: "Product & Game Designer · Joy Education",
+        responsibilities: [
+            "Translating reading literacy fundamentals into game mechanics and communicating design objectives to engineering",
+            "Facilitating co-generative design sprints with students and educators",
+            "Running user testing with students, teachers, and caregivers to iterate on play and features",
+            "Conducting qualitative UX research across students, educators, caregivers, and out-of-school providers to inform product direction"
+        ],
         comingSoon: true,
         links: []
     },
@@ -27,7 +36,12 @@ const projects = [
         thumbnail: "",
         emoji: "🎭",
         description: "A Global Game Jam 2026 social sim: assign masks from NPC thoughts and keep a festival from collapsing as happiness spreads — or sours.",
-        summary: "Made with Sam You'll and Lendelacreme in Unity. Players click NPCs to read their thoughts, drag on a fitting mask, and watch shade-of-grey happiness rise or fall through social interactions. A wrong mask can be mashed off and retried — but let happiness drop too far and the festival suffers.",
+        role: "Game Designer",
+        responsibilities: [
+            "Designed the core loop: click NPCs to read their thoughts, assign a matching mask, and watch happiness spread or sour",
+            "Tuned retry (mash off a wrong mask) against festival-failure stakes so a bad read still has a cost",
+            "Collaborated in Unity with Sam You'll and Lendelacreme for Global Game Jam 2026"
+        ],
         itchEmbed: "https://itch.io/embed-upload/16341037?color=333333&border_width=0&border_radius=0",
         links: [
             { text: "Play on Itch.io", url: "https://sam-youll.itch.io/assimulation", icon: "fa-gamepad", style: "solid" }
@@ -42,7 +56,12 @@ const projects = [
         thumbnail: "",
         emoji: "🌔",
         description: "A VR learning-game design for practicing moon phases for Grades 5~6 based on Mislevy's Evidence-Centered Design for assessment, design, pedagogy, and session flow.",
-        summary: "Design and storyboard deck covering the theoretical framework, the core game loop, and 2 example levels. Expand this card to page through the slides here, or open them in Canva.",
+        role: "Learning Game Designer",
+        responsibilities: [
+            "Framed moon-phase practice for Grades 5–6 using Mislevy's Evidence-Centered Design across assessment, pedagogy, and session flow",
+            "Designed and storyboarded the core loop plus two example levels",
+            "Documented the theoretical framework in a design deck for review and teaching"
+        ],
         slidesEmbed: "https://www.canva.com/design/DAG2Xss5gew/YvDS3W553V2I-L9cXM9pTQ/view?embed",
         links: [
             { text: "Open in Canva", url: "https://www.canva.com/design/DAG2Xss5gew/YvDS3W553V2I-L9cXM9pTQ/view", icon: "fa-up-right-from-square", style: "ghost" }
@@ -56,7 +75,12 @@ const projects = [
         thumbnail: "",
         emoji: "🔤",
         description: "A phonics learning game grounded in Science of Reading research, designed and storyboarded for early literacy practice that also served as my Capstone Thesis Design Project.",
-        summary: "Capstone expo poster: research frame, core loop, and how the game turns phonics practice into play. Expand the card to preview the PDF.",
+        role: "Game Designer · Capstone Thesis",
+        responsibilities: [
+            "Designed a phonics learning game grounded in Science of Reading research",
+            "Storyboarded early-literacy practice into a playable core loop",
+            "Packaged the research frame, loop, and design argument for the capstone expo poster"
+        ],
         links: [
             { text: "Expo poster (PDF)", url: "assets/pdfs/SP25.Th2.ExpoPoster.darrylH.v3.pdf", icon: "fa-file-pdf", style: "solid" }
         ]
@@ -69,7 +93,11 @@ const projects = [
         thumbnail: "",
         emoji: "🥷🏾",
         description: "When combat fights against combatants — a close read of Shinobi: Art of Vengeance's encounter design.",
-        summary: "A GameXP-style write-up on how combat systems, enemy roles, and player expression support — or undercut — each other in Treasure's revival of Shinobi.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Close-reading how combat systems, enemy roles, and player expression support — or undercut — each other",
+            "Writing a GameXP-style case study of Treasure's revival of Shinobi"
+        ],
         published: false,
         comingSoon: true,
         links: []
@@ -82,6 +110,10 @@ const projects = [
         thumbnail: "",
         emoji: "📡",
         description: "Extraction tension, squad communication, and how PvPvE risk shapes every raid decision.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Analyzing extraction tension, squad communication, and how PvPvE risk shapes raid decisions"
+        ],
         published: false,
         comingSoon: true,
         links: []
@@ -94,6 +126,10 @@ const projects = [
         thumbnail: "",
         emoji: "👊",
         description: "Beat 'em up encounter pacing, co-op readability, and how Absolum teaches its combat vocabulary.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Close-reading encounter pacing, co-op readability, and how Absolum teaches its combat vocabulary"
+        ],
         published: false,
         comingSoon: true,
         links: []
@@ -106,6 +142,10 @@ const projects = [
         thumbnail: "",
         emoji: "🧟",
         description: "Resource pressure, first-person survival horror, and how Village moves between exploration and set-piece combat.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Analyzing resource pressure and how Village moves between exploration and set-piece combat"
+        ],
         published: false,
         comingSoon: true,
         links: []
@@ -118,6 +158,10 @@ const projects = [
         thumbnail: "",
         emoji: "🌙",
         description: "How Nightreign retools Elden Ring's combat for co-op, session-based runs.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Close-reading how Nightreign retools Elden Ring's combat for co-op, session-based runs"
+        ],
         published: false,
         comingSoon: true,
         links: []
@@ -130,6 +174,11 @@ const projects = [
         thumbnail: "",
         emoji: "🎨",
         description: "Turn-based timing, party identity, and how Expedition 33 gives mechanical encounters narrative weight.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Close-reading turn-based timing, party identity, and how mechanical encounters carry narrative weight",
+            "Writing a GameXP-style case study — in progress"
+        ],
         comingSoon: true,
         links: []
     },
@@ -141,7 +190,12 @@ const projects = [
         thumbnail: "",
         emoji: "🐸",
         description: "Secret density and environmental teaching — how Animal Well onboards through space instead of text.",
-        summary: "A GameXP case study on how Animal Well teaches through toys, threats, and space instead of a conventional tutorial. Expand the card to preview the PDF.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Wrote a GameXP case study on how Animal Well teaches through toys, threats, and space instead of a conventional tutorial",
+            "Traced secret density and environmental onboarding as a design pattern",
+            "Articulated a takeaway for how space can replace instructional text"
+        ],
         links: [
             { text: "Read PDF", url: "assets/pdfs/GameXP.AnimalWell.pdf", icon: "fa-file-pdf", style: "solid" }
         ]
@@ -154,6 +208,11 @@ const projects = [
         thumbnail: "",
         emoji: "⏳",
         description: "Double techs, encounter rhythm, and how combat supports a time-travel narrative.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Close-reading double techs, encounter rhythm, and how combat supports a time-travel narrative",
+            "Writing a GameXP-style case study — in progress"
+        ],
         comingSoon: true,
         links: []
     },
@@ -165,6 +224,10 @@ const projects = [
         thumbnail: "",
         emoji: "🌚",
         description: "Notes on upcoming expansion systems — onboarding, activity structure, and how Midnight frames new player goals.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Analyzing onboarding, activity structure, and how Midnight frames new player goals"
+        ],
         published: false,
         comingSoon: true,
         links: []
@@ -177,6 +240,11 @@ const projects = [
         thumbnail: "",
         emoji: "🎧",
         description: "A live jazz-hop and downtempo mix — Nujabes, Freddie Joachim, Toonorth, Middle School, and more.",
+        role: "DJ / Selector",
+        responsibilities: [
+            "Selected and mixed a live jazz-hop and downtempo set",
+            "Recorded and published the mix on Mixcloud"
+        ],
         embed: `<iframe width="100%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FCosmos_%2Fmix-v07%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"></iframe>`,
         links: [
             { text: "Listen on Mixcloud", url: "https://www.mixcloud.com/Cosmos_/mix-v07/", icon: "fa-headphones", style: "solid" }
@@ -190,6 +258,11 @@ const projects = [
         thumbnail: "",
         emoji: "🎧",
         description: "An Afro house set recorded in 2024, from Iorona through Yara.",
+        role: "DJ / Selector",
+        responsibilities: [
+            "Selected and mixed an Afro house set, from Iorona through Yara",
+            "Recorded and published the mix on SoundCloud"
+        ],
         embed:`<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1855351530&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/darryl_21" title="Cosmos_" target="_blank" style="color: #cccccc; text-decoration: none;">Cosmos_</a> · <a href="https://soundcloud.com/darryl_21/mix-vol-06" title="Mix v0.6" target="_blank" style="color: #cccccc; text-decoration: none;">Mix v0.6</a></div>`,
         links: [
             { text: "Listen on SoundCloud", url: "https://soundcloud.com/darryl_21/mix-vol-06", icon: "fa-headphones", style: "solid" }
@@ -204,6 +277,11 @@ const projects = [
         thumbnail: "",
         emoji: "🧩",
         description: "NYU Games for Learning prototype exploring puzzle structure, spatial reasoning, and player onboarding.",
+        role: "Game Designer · NYU Games for Learning",
+        responsibilities: [
+            "Prototyped puzzle structure, spatial reasoning, and player onboarding",
+            "Build and write-up coming soon"
+        ],
         comingSoon: true,
         links: []
     },
@@ -215,6 +293,11 @@ const projects = [
         thumbnail: "",
         emoji: "📚",
         description: "A learning-game prototype focused on reading engagement, feedback, and tutorialization.",
+        role: "Learning Game Designer · NYU Games for Learning",
+        responsibilities: [
+            "Prototyped reading engagement, feedback, and tutorialization",
+            "Build and write-up coming soon"
+        ],
         comingSoon: true,
         links: []
     },
@@ -226,7 +309,12 @@ const projects = [
         thumbnail: "",
         emoji: "⚔️",
         description: "A systems rework looking at combat identity, job onboarding, and how FFXIV teaches its own complexity.",
-        summary: "Two content-designer exercises: a dungeon-boss plan and an Aether Break / Aether Chain growth pitch. Expand the card to preview either PDF.",
+        role: "Content Designer",
+        responsibilities: [
+            "Wrote a dungeon-boss plan examining combat identity and how the encounter teaches FFXIV's complexity",
+            "Pitched Aether Break / Aether Chain as a growth system for job onboarding",
+            "Documented both as content-designer exercises"
+        ],
         links: [
             { text: "Boss design (PDF)", url: "assets/pdfs/FFXIV-Boss-Design.pdf", icon: "fa-file-pdf", style: "solid", preview: "Preview boss plan" },
             { text: "Aether Break (PDF)", url: "assets/pdfs/FFXIV-Aether-Break.pdf", icon: "fa-file-pdf", style: "ghost", preview: "Preview Aether Break" }
@@ -240,7 +328,12 @@ const projects = [
         thumbnail: "",
         emoji: "🍄",
         description: "A design rework that aims at the gap between how Mario Maker facilitates creation within levels instead of only outside of levels.",
-        summary: "Expand the card to preview the PDF, or open it in a new tab.",
+        role: "Game Designer",
+        responsibilities: [
+            "Identified the gap between creation tools used outside levels and creation facilitated inside play",
+            "Proposed a gameplay rework that brings making into the level itself",
+            "Documented the redesign as a systems/design brief"
+        ],
         links: [
             { text: "Open PDF", url: "assets/pdfs/Mario-Maker-Gameplay-Redesign.pdf", icon: "fa-file-pdf", style: "solid" }
         ]
@@ -253,6 +346,10 @@ const projects = [
         thumbnail: "",
         emoji: "🔋",
         description: "Energy-transfer puzzles, narrative framing, and how The Turing Test uses a single mechanic to pace discovery.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Close-reading energy-transfer puzzles, narrative framing, and how a single mechanic paces discovery"
+        ],
         published: false,
         comingSoon: true,
         links: []
@@ -265,6 +362,10 @@ const projects = [
         thumbnail: "",
         emoji: "🌟",
         description: "Real-time combat versus classic structure — character banter, pacing, and how Remake teaches a new battle language.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Analyzing real-time combat versus classic structure, and how Remake teaches a new battle language"
+        ],
         published: false,
         comingSoon: true,
         links: []
@@ -277,6 +378,10 @@ const projects = [
         thumbnail: "",
         emoji: "🪙",
         description: "Catching as the core loop, research tasks, and how Arceus rebuilds Pokémon around exploration instead of gyms.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Close-reading catching as the core loop and how Arceus rebuilds Pokémon around exploration"
+        ],
         published: false,
         comingSoon: true,
         links: []
@@ -289,7 +394,12 @@ const projects = [
         thumbnail: "",
         emoji: "🏢",
         description: "How does the Oldest House serve as both the main character and The Mentor for the player?",
-        summary: "A GameXP case study on how architecture, not UI, onboards Control's sci-fi fantasy via environment, shifting architecture and later unfortunately undercuts some of that teaching with superfluous late-game lore, upgrades, and errands.",
+        role: "Design Analyst",
+        responsibilities: [
+            "Wrote a GameXP case study on how architecture, not UI, onboards Control's sci-fi fantasy",
+            "Analyzed the Oldest House as both main character and Mentor for the player",
+            "Tracked where late-game lore, upgrades, and errands undercut that teaching"
+        ],
         links: [
             { text: "Read PDF", url: "assets/pdfs/GameXP.Control.UPLOAD.pdf", icon: "fa-file-pdf", style: "solid" }
         ]
@@ -303,6 +413,11 @@ const projects = [
         thumbnail: "",
         emoji: "🎧",
         description: "An early chillhop set — Vanilla, jinsang, goosetaf, Blue Wednesday, and adjacent lo-fi.",
+        role: "DJ / Selector",
+        responsibilities: [
+            "Selected and mixed an early chillhop set — Vanilla, jinsang, goosetaf, Blue Wednesday, and adjacent lo-fi",
+            "Published the mix on SoundCloud"
+        ],
         embed:`<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1003790935&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/darryl_21" title="Cosmos_" target="_blank" style="color: #cccccc; text-decoration: none;">Cosmos_</a> · <a href="https://soundcloud.com/darryl_21/mix-v02" title="Mix v0.2" target="_blank" style="color: #cccccc; text-decoration: none;">Mix v0.2</a></div>`,
         links: [
             { text: "Listen on SoundCloud", url: "https://soundcloud.com/darryl_21/mix-v02", icon: "fa-headphones", style: "solid" }
@@ -317,6 +432,11 @@ const projects = [
         thumbnail: "",
         emoji: "🔫",
         description: "An early Unity HTML5 shooter prototype — still playable in the browser.",
+        role: "Game Designer",
+        responsibilities: [
+            "Designed and built an early Unity HTML5 shooter prototype",
+            "Shipped a still-playable in-browser build on itch.io"
+        ],
         itchEmbed: "https://itch.io/embed-upload/1044737?color=333333",
         links: [
             { text: "Play on Itch.io", url: "https://cosmos-soul.itch.io/shooter-protoype", icon: "fa-gamepad", style: "solid" }
@@ -446,6 +566,18 @@ function liveProjectLinks(p) {
     return (p.links || []).filter(l => isLiveUrl(l.url));
 }
 
+function roleBlockHtml(p) {
+    const items = (p.responsibilities || []).map(item => `<li>${item}</li>`).join("");
+    if (!p.role && !items) return "";
+    const role = p.role ? `<p class="project-role-name">${p.role}</p>` : "";
+    const list = items ? `<ul class="project-responsibilities">${items}</ul>` : "";
+    return `<div class="project-role-block">
+                <p class="project-role-label">Role &amp; responsibilities</p>
+                ${role}
+                ${list}
+            </div>`;
+}
+
 function pdfPreviewButtons(p, liveLinks) {
     const pdfs = liveLinks.filter(l => l.url.endsWith(".pdf"));
     return pdfs.map(l => {
@@ -520,6 +652,7 @@ function renderProjects() {
                 <p class="project-category">${p.category.replace("-", " ")} &middot; ${p.year}</p>
                 <h3 class="project-title">${p.title}</h3>
                 <p class="project-desc">${p.description}</p>
+                ${roleBlockHtml(p)}
                 ${p.summary ? `<p class="project-summary">${p.summary}</p>` : ""}
                 ${slidesHolder}
                 <div class="project-links" style="display: none;">${linksHtml}</div>
@@ -659,7 +792,7 @@ function initProjectModal() {
         metaEl.textContent  = `${p.category.replace("-", " ")} · ${p.year}`;
         titleEl.textContent = p.title;
         descEl.textContent  = p.description;
-        summaryEl.textContent = p.summary || "";
+        summaryEl.innerHTML = roleBlockHtml(p) + (p.summary ? `<p class="project-summary">${p.summary}</p>` : "");
 
         const liveLinks = liveProjectLinks(p);
         const previewBtn = pdfPreviewButtons(p, liveLinks);
