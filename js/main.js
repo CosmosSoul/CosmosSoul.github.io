@@ -9,6 +9,17 @@
 const projects = [
     // ── 2026 ──────────────────────────────────────────────
     {
+        id: "game-design-joyed-literacy",
+        title: "Ground Control",
+        category: "game-design",
+        year: 2026,
+        thumbnail: "",
+        emoji: "🌱",
+        description: "In progress with Joy Education: working with students, teachers, and caregivers to build research-informed, game-based literacy games — learning mechanics kids can grow with while they play.",
+        comingSoon: true,
+        links: []
+    },
+    {
         id: "game-design-assimulation",
         title: "Assimulation",
         category: "game-design",
