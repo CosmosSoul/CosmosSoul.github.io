@@ -130,7 +130,6 @@ const projects = [
         thumbnail: "",
         emoji: "🎨",
         description: "Turn-based timing, party identity, and how Expedition 33 gives mechanical encounters narrative weight.",
-        published: false,
         comingSoon: true,
         links: []
     },
@@ -155,7 +154,6 @@ const projects = [
         thumbnail: "",
         emoji: "⏳",
         description: "Double techs, encounter rhythm, and how combat supports a time-travel narrative.",
-        published: false,
         comingSoon: true,
         links: []
     },
