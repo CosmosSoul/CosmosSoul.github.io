@@ -242,8 +242,8 @@ const projects = [
         description: "A live jazz-hop and downtempo mix — Nujabes, Freddie Joachim, Toonorth, Middle School, and more.",
         role: "DJ / Selector",
         responsibilities: [
-            "Selected and mixed a live jazz-hop and downtempo set",
-            "Recorded and published the mix on Mixcloud"
+            "Selected, curated tracks via bandcamp and mixed a live jazz-hop and downtempo set",
+            "Performed live via a VCI-380 and Serato, recorded and edited with Audacity and published the mix on Mixcloud"
         ],
         embed: `<iframe width="100%" height="120" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FCosmos_%2Fmix-v07%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"></iframe>`,
         links: [
@@ -257,11 +257,11 @@ const projects = [
         year: 2024,
         thumbnail: "",
         emoji: "🎧",
-        description: "An Afro house set recorded in 2024, from Iorona through Yara.",
+        description: "An Afro house set recorded in 2024, from Iorona through Yara",
         role: "DJ / Selector",
         responsibilities: [
-            "Selected and mixed an Afro house set, from Iorona through Yara",
-            "Recorded and published the mix on SoundCloud"
+            "Selected, curated and mixed an Afro house set, including Carlos Francisco and Sam One to Eran Hersh and Luedji Luna edits.",
+            "Performed live via a VCI-380 and Serato, recorded and edited with Audacity and published the mix on SoundCloud"
         ],
         embed:`<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1855351530&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/darryl_21" title="Cosmos_" target="_blank" style="color: #cccccc; text-decoration: none;">Cosmos_</a> · <a href="https://soundcloud.com/darryl_21/mix-vol-06" title="Mix v0.6" target="_blank" style="color: #cccccc; text-decoration: none;">Mix v0.6</a></div>`,
         links: [
@@ -415,8 +415,8 @@ const projects = [
         description: "An early chillhop set — Vanilla, jinsang, goosetaf, Blue Wednesday, and adjacent lo-fi.",
         role: "DJ / Selector",
         responsibilities: [
-            "Selected and mixed an early chillhop set — Vanilla, jinsang, goosetaf, Blue Wednesday, and adjacent lo-fi",
-            "Published the mix on SoundCloud"
+            "Selected and mixed an early chillhop set — Vanilla, jinsang, goosetaf, Blue Wednesday, and appropriate lo-fi adjacent vibes",
+            "Performed live via a VCI-380 and Serato, recorded and edited with Audacity and published the mix on SoundCloud"
         ],
         embed:`<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1003790935&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/darryl_21" title="Cosmos_" target="_blank" style="color: #cccccc; text-decoration: none;">Cosmos_</a> · <a href="https://soundcloud.com/darryl_21/mix-v02" title="Mix v0.2" target="_blank" style="color: #cccccc; text-decoration: none;">Mix v0.2</a></div>`,
         links: [
