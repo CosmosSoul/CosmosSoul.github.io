@@ -56,8 +56,10 @@ const projects = [
         thumbnail: "",
         emoji: "🔤",
         description: "A phonics learning game grounded in Science of Reading research, designed and storyboarded for early literacy practice that also served as my Capstone Thesis Design Project.",
-        comingSoon: true,
-        links: []
+        summary: "Capstone expo poster: research frame, core loop, and how the game turns phonics practice into play. Expand the card to preview the PDF.",
+        links: [
+            { text: "Expo poster (PDF)", url: "assets/pdfs/SP25.Th2.ExpoPoster.darrylH.v3.pdf", icon: "fa-file-pdf", style: "solid" }
+        ]
     },
     {
         id: "analysis-shinobi",
@@ -68,9 +70,9 @@ const projects = [
         emoji: "🥷🏾",
         description: "When combat fights against combatants — a close read of Shinobi: Art of Vengeance's encounter design.",
         summary: "A GameXP-style write-up on how combat systems, enemy roles, and player expression support — or undercut — each other in Treasure's revival of Shinobi.",
-        links: [
-            { text: "Read PDF", url: "assets/pdfs/GameXP.Shinobi.UPLOAD.pdf", icon: "fa-file-pdf", style: "solid" }
-        ]
+        published: false,
+        comingSoon: true,
+        links: []
     },
     {
         id: "analysis-arc-raiders",
@@ -80,6 +82,7 @@ const projects = [
         thumbnail: "",
         emoji: "📡",
         description: "Extraction tension, squad communication, and how PvPvE risk shapes every raid decision.",
+        published: false,
         comingSoon: true,
         links: []
     },
@@ -91,6 +94,8 @@ const projects = [
         thumbnail: "",
         emoji: "👊",
         description: "Beat 'em up encounter pacing, co-op readability, and how Absolum teaches its combat vocabulary.",
+        published: false,
+        comingSoon: true,
         links: []
     },
     {
@@ -101,6 +106,8 @@ const projects = [
         thumbnail: "",
         emoji: "🧟",
         description: "Resource pressure, first-person survival horror, and how Village moves between exploration and set-piece combat.",
+        published: false,
+        comingSoon: true,
         links: []
     },
     {
@@ -111,6 +118,8 @@ const projects = [
         thumbnail: "",
         emoji: "🌙",
         description: "How Nightreign retools Elden Ring's combat for co-op, session-based runs.",
+        published: false,
+        comingSoon: true,
         links: []
     },
     {
@@ -121,6 +130,8 @@ const projects = [
         thumbnail: "",
         emoji: "🎨",
         description: "Turn-based timing, party identity, and how Expedition 33 gives mechanical encounters narrative weight.",
+        published: false,
+        comingSoon: true,
         links: []
     },
     {
@@ -131,7 +142,10 @@ const projects = [
         thumbnail: "",
         emoji: "🐸",
         description: "Secret density and environmental teaching — how Animal Well onboards through space instead of text.",
-        links: []
+        summary: "A GameXP case study on how Animal Well teaches through toys, threats, and space instead of a conventional tutorial. Expand the card to preview the PDF.",
+        links: [
+            { text: "Read PDF", url: "assets/pdfs/GameXP.AnimalWell.pdf", icon: "fa-file-pdf", style: "solid" }
+        ]
     },
     {
         id: "analysis-chrono-trigger",
@@ -141,6 +155,7 @@ const projects = [
         thumbnail: "",
         emoji: "⏳",
         description: "Double techs, encounter rhythm, and how combat supports a time-travel narrative.",
+        published: false,
         comingSoon: true,
         links: []
     },
@@ -152,6 +167,8 @@ const projects = [
         thumbnail: "",
         emoji: "🌚",
         description: "Notes on upcoming expansion systems — onboarding, activity structure, and how Midnight frames new player goals.",
+        published: false,
+        comingSoon: true,
         links: []
     },
     {
@@ -238,6 +255,7 @@ const projects = [
         thumbnail: "",
         emoji: "🔋",
         description: "Energy-transfer puzzles, narrative framing, and how The Turing Test uses a single mechanic to pace discovery.",
+        published: false,
         comingSoon: true,
         links: []
     },
@@ -249,6 +267,7 @@ const projects = [
         thumbnail: "",
         emoji: "🌟",
         description: "Real-time combat versus classic structure — character banter, pacing, and how Remake teaches a new battle language.",
+        published: false,
         comingSoon: true,
         links: []
     },
@@ -260,6 +279,7 @@ const projects = [
         thumbnail: "",
         emoji: "🪙",
         description: "Catching as the core loop, research tasks, and how Arceus rebuilds Pokémon around exploration instead of gyms.",
+        published: false,
         comingSoon: true,
         links: []
     },
