@@ -47,6 +47,23 @@ const projects = [
             { text: "Play on Itch.io", url: "https://sam-youll.itch.io/assimulation", icon: "fa-gamepad", style: "solid" }
         ]
     },
+    {
+        id: "analysis-europa-ux",
+        title: "UX Research — Europa",
+        category: "analysis",
+        year: 2026,
+        thumbnail: "",
+        emoji: "🪐",
+        description: "A UX / usability study of Europa: how a peaceful exploration adventure onboards movement, wayfinding, and story across a low-challenge, open landscape.",
+        role: "UX / Usability Researcher",
+        responsibilities: [
+            "Observing onboarding, wayfinding, and jetpack-movement readability in Europa's exploration loop",
+            "Documenting where usability friction shows up in a low-challenge, story-driven adventure",
+            "Writing a UX / usability research analysis — in progress"
+        ],
+        comingSoon: true,
+        links: []
+    },
     // ── 2025 ──────────────────────────────────────────────
     {
         id: "game-design-moon-phases-vr",
