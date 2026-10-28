@@ -194,6 +194,12 @@ button.btn {
     justify-content: space-between;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .nav-logo {
     font-size: 1.4rem;
     font-weight: 800;
@@ -259,7 +265,6 @@ button.btn {
     border: 1.5px solid var(--border);
     transition: color var(--transition), border-color var(--transition), background var(--transition), transform var(--transition);
     flex-shrink: 0;
-    margin-left: 8px;
 }
 .theme-toggle:hover {
     color: var(--accent);
